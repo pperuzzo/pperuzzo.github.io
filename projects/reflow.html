@@ -41,33 +41,44 @@
             - developed a simple admin dashboard to manage the extension's users<br>
             - generated ~400 downloads on vscode marketplace, ~100 active users
         </p>
-        
+
         <h2 class="text-md font-bold pt-3">overview</h2>
         <div class="max-w-full md:max-w-2xl">
             <p class="pb-2">
-                one of the main problems that every developer working on a big project faces is the struggle of managing work across different programs.<br>
-                daily tasks are usually stored in a project management software, which is not connected to the code base.<br>
+                one of the main problems that every developer working on a big project faces is the struggle of managing
+                work across different programs.<br>
+                daily tasks are usually stored in a project management software, which is not connected to the code
+                base.<br>
                 reflow aims to solve exactly this problem.<br>
-                by bringing a lightweight collaborative kanban-style project management software inside vscode, it allows developers to never leave their code editor and to reference code in their tasks.
+                by bringing a lightweight collaborative kanban-style project management software inside vscode, it
+                allows developers to never leave their code editor and to reference code in their tasks.
             </p>
             <p class="pb-2">
-                i developed both the frontend and backend of the extension using javascript (vue.js) and typescript, creating a robust and efficient solution. <br>
+                i developed both the frontend and backend of the extension using javascript (vue.js) and typescript,
+                creating a robust and efficient solution. <br>
                 by working with the vscode api, i was able to seamlessly integrate reflow with the code editor.<br>
-                i also achieved a sense of integration by using the user's theme colors in the ui, and by recreating ui components similar to the ones in vscode.
+                i also achieved a sense of integration by using the user's theme colors in the ui, and by recreating ui
+                components similar to the ones in vscode.
             </p>
             <p class="pb-2">
-                to enhance the user experience, i implemented a networking system that allows for real-time collaboration.<br>
+                to enhance the user experience, i implemented a networking system that allows for real-time
+                collaboration.<br>
                 this enables users to work together on their projects with ease.<br>
-                in addition, i worked on the authentication system using jwt auth. to improve the user experience, i integrated the auth system with third party providers such as github and google, ensuring a secure and convenient sign-up process.
+                in addition, i worked on the authentication system using jwt auth. to improve the user experience, i
+                integrated the auth system with third party providers such as github and google, ensuring a secure and
+                convenient sign-up process.
             </p>
             <p class="pb-2">
-                to facilitate the management of the extension's users, i developed a simple admin dashboard using php laravel, vue.js and tailwind css.<br>
-                this tool allowed my teammates and me easy oversight and administration of the user base, ensuring a smooth user experience for all.
+                to facilitate the management of the extension's users, i developed a simple admin dashboard using php
+                laravel, vue.js and tailwind css.<br>
+                this tool allowed my teammates and me easy oversight and administration of the user base, ensuring a
+                smooth user experience for all.
             </p>
             <p class="pb-2">
                 the extension quickly gained traction on the vscode marketplace with 0 marketing dollars.<br>
                 reflow generated approximately 400 downloads and 100 active users.<br>
-                the success of reflow demonstrates its value in providing an efficient and collaborative solution for developers, streamlining their workflow and enhancing productivity.
+                the success of reflow demonstrates its value in providing an efficient and collaborative solution for
+                developers, streamlining their workflow and enhancing productivity.
             </p>
         </div>
 
@@ -86,11 +97,11 @@
         <div class="max-w-full md:max-w-2xl">
             <div class="grid md:grid-cols-2 gap-3 text-gray-600">
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/reflow.png" />
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/reflow.png" />
                     <p>software demo</p>
                 </div>
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/reflow-collaboration.gif" />
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/reflow-collaboration.gif" />
                     <p>example of real-time collaboration</p>
                 </div>
             </div>
@@ -112,7 +123,31 @@
         <div class="py-5">
             <a class="underline" href="/building.html">back</a>
         </div>
+
+        <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
+            id="modal">
+            <img id="modalImage" class="max-w-full max-h-full" src="">
+        </div>
+
     </div>
+
+    <script>
+        let modal = document.getElementById("modal");
+        let modalImg = document.getElementById("modalImage");
+        let images = document.querySelectorAll(".image");
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        modal.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+    </script>
+
 </body>
 
 </html>

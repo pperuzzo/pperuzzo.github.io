@@ -34,32 +34,43 @@
         <h2 class="text-md font-bold pt-3">tldr</h2>
         <p class="max-w-full md:max-w-2xl">
             - designed and developed a fully responsive website frontend and backend from scratch<br>
-            - created a landing page, a web app for building owners, a web app for energy providers, and an admin panel<br>
+            - created a landing page, a web app for building owners, a web app for energy providers, and an admin
+            panel<br>
             - integrated a utility data api to get energy consumption data from buildings<br>
             - integrated stripe to accept payments<br>
             - deployed the website to aws
         </p>
-        
+
         <h2 class="text-md font-bold pt-3">overview</h2>
         <div class="max-w-full md:max-w-2xl">
             <p class="pb-2">
                 commercial property owners often have extensive parts of their properties completely unused.<br>
                 this is usually in the form of roofs and parking lots.<br>
-                on the other end, energy providers are always on the lookout for spaces where they can build renewable energy infrastructure and sell the energy generated.<br>
-                by leveraging a web app, i created spaceflare: a platform designed for commercial property owners to host clean energy technologies, bridging the gap between building owners and energy providers.
+                on the other end, energy providers are always on the lookout for spaces where they can build renewable
+                energy infrastructure and sell the energy generated.<br>
+                by leveraging a web app, i created spaceflare: a platform designed for commercial property owners to
+                host clean energy technologies, bridging the gap between building owners and energy providers.
             </p>
             <p class="pb-2">
-                the website consists of a landing page, a web application for building owners, a web application for energy providers, and an admin panel for managing the platform.<br> 
-                i designed and developed the majority of the code for spaceflare, ensuring that each component was tailored to the specific needs of its respective user group, and (if possible) reusable throughout the application.<br>
-                i developed the website using a combination of php laravel, vue.js, inertia.js, and tailwind css. the whole system is supported by a mysql database that stores customer's data.
+                the website consists of a landing page, a web application for building owners, a web application for
+                energy providers, and an admin panel for managing the platform.<br>
+                i designed and developed the majority of the code for spaceflare, ensuring that each component was
+                tailored to the specific needs of its respective user group, and (if possible) reusable throughout the
+                application.<br>
+                i developed the website using a combination of php laravel, vue.js, inertia.js, and tailwind css. the
+                whole system is supported by a mysql database that stores customer's data.
             </p>
             <p class="pb-2">
-                to provide accurate and up-to-date energy consumption data for buildings, i integrated a utility data api.<br> 
-                this feature allows building owners and energy providers to make informed decisions based on real-world data.<br>
-                additionally, i helped integrate stripe into the website to enable seamless and secure payment processing within the platform.
+                to provide accurate and up-to-date energy consumption data for buildings, i integrated a utility data
+                api.<br>
+                this feature allows building owners and energy providers to make informed decisions based on real-world
+                data.<br>
+                additionally, i helped integrate stripe into the website to enable seamless and secure payment
+                processing within the platform.
             </p>
             <p class="pb-2">
-                finally, i deployed the website to aws ec2 to ensure a reliable, scalable, and high-performance hosting solution.
+                finally, i deployed the website to aws ec2 to ensure a reliable, scalable, and high-performance hosting
+                solution.
             </p>
         </div>
 
@@ -83,15 +94,15 @@
         <div class="max-w-full md:max-w-2xl">
             <div class="grid md:grid-cols-2 gap-3 text-gray-600">
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/spaceflare-1.jpg" />
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/spaceflare-1.jpg" />
                     <p>project view</p>
                 </div>
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/spaceflare-2.png" />
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/spaceflare-2.png" />
                     <p>project overview part 1</p>
                 </div>
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/spaceflare-3.png" />
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/spaceflare-3.png" />
                     <p>project overview part 2</p>
                 </div>
             </div>
@@ -112,7 +123,30 @@
         <div class="py-5">
             <a class="underline" href="/building.html">back</a>
         </div>
+
+        <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
+            id="modal">
+            <img id="modalImage" class="max-w-full max-h-full" src="">
+        </div>
+
     </div>
+
+    <script>
+        let modal = document.getElementById("modal");
+        let modalImg = document.getElementById("modalImage");
+        let images = document.querySelectorAll(".image");
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        modal.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+    </script>
 </body>
 
 </html>

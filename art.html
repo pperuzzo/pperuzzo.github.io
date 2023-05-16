@@ -25,18 +25,40 @@
         <h1 class="text-lg font-bold pb-2">art</h1>
         <div class="max-w-full md:max-w-2xl">
             <div class="">
-                <img class="w-full md:w-1/2" src="/imgs/souvenirdeparis.jpg" />
+                <img class="cursor-pointer image w-full md:w-1/2" src="/imgs/souvenirdeparis.jpg" />
             </div>
             <p class="pb-5">by <a href="https://www.instagram.com/andceresa" target=”_blank”>andrea ceresa</a></p>
             <div class="">
-                <img class="w-full md:w-1/2" src="/imgs/realtavirtuale.png" />
+                <img class="cursor-pointer image w-full md:w-1/2" src="/imgs/realtavirtuale.png" />
             </div>
             <p class="pb-5">by <a href="https://www.alexablanchet.com/" target=”_blank”>alexa blanchet</a></p>
         </div>
 
-
         <a class="underline" href="/">back</a>
+
+        <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
+            id="modal">
+            <img id="modalImage" class="max-w-full max-h-full" src="">
+        </div>
+
     </div>
+
+    <script>
+        let modal = document.getElementById("modal");
+        let modalImg = document.getElementById("modalImage");
+        let images = document.querySelectorAll(".image");
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        modal.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+    </script>
 
 </body>
 

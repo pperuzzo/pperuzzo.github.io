@@ -20,7 +20,7 @@
 </head>
 
 <body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
+    <div class="px-5 pt-5 text-xs">
         <h1 class="text-lg font-bold">geodome</h1>
         <p class="py-2 max-w-full md:max-w-2xl">vr shopping experience for luxury brands
         </p>
@@ -112,27 +112,27 @@
                     <p>software demo</p>
                 </div>
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/geodome-ai-filter.gif" />
-                    <p>ai assistant demo<</p>
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/geodome-ai-filter.gif" />
+                    <p>ai assistant demo</p>
                 </div>
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/geodome-scanner.JPG" />
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/geodome-scanner.JPG" />
                     <p>geodome's 3d scanner with mannequin</p>
                 </div>
                 <div>
-                    <img class="w-full aspect-auto" src="/imgs/geodome-sim.gif" />
+                    <img class="cursor-pointer image w-full aspect-auto" src="/imgs/geodome-sim.gif" />
                     <p>cloth simulation testing</p>
                 </div>
                 <div>
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/5wk7NFjKduY" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     <p>demo gucci store</p>
                 </div>
                 <div>
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/3XMpVCImdwY" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     <p>demo missoni store</p>
                 </div>
             </div>
@@ -147,7 +147,30 @@
         <div class="py-5">
             <a class="underline" href="/building.html">back</a>
         </div>
+
+        <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
+            id="modal">
+            <img id="modalImage" class="max-w-full max-h-full" src="">
+        </div>
     </div>
+
+    <script>
+        let modal = document.getElementById("modal");
+        let modalImg = document.getElementById("modalImage");
+        let images = document.querySelectorAll(".image");
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        modal.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+    </script>
+
 </body>
 
 </html>

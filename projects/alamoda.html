@@ -20,7 +20,7 @@
 </head>
 
 <body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
+    <div class="px-5 pt-5 text-xs">
         <h1 class="text-lg font-bold">alamoda</h1>
         <p class="py-2 max-w-full md:max-w-2xl">
             a platform that provides 50-80% discount for luxury fashion brands
@@ -42,21 +42,24 @@
         <h2 class="text-md font-bold pt-3">overview</h2>
         <div class="max-w-full md:max-w-2xl">
             <p class="pb-2">
-                alamoda collaborates with the top fashion boutiques in italy to bring designer fashion brands to the us market
+                alamoda collaborates with the top fashion boutiques in italy to bring designer fashion brands to the us
+                market
                 at heavily discounted prices.<br>
                 after personally forging a partnership with one of the largest boutiques in italy, i had to devise a
                 method to obtain high-quality product
                 images starting from a list of skus.
             </p>
             <p class="pb-2">
-                i developed a custom web scraper from scratch using python and beautifulsoup to efficiently search for and
+                i developed a custom web scraper from scratch using python and beautifulsoup to efficiently search for
+                and
                 download product images
                 starting from the product sku provided by the boutiques.<br>
                 i designed the scraper to target specific keywords and collect relevant images, ensuring
                 that only high-quality and suitable images were gathered.
             </p>
             <p class="pb-2">
-                i then created another python script to automatically superimpose the scraped images on a predefined background
+                i then created another python script to automatically superimpose the scraped images on a predefined
+                background
                 and then apply relevant text as an overlay.<br>
                 this allows for the seamless generation of product pictures for alamoda's
                 social media, saving time and enabling the marketing team to concentrate on other significant tasks.
@@ -80,7 +83,7 @@
         <div class="max-w-full md:max-w-2xl">
             <div class="grid md:grid-cols-2 gap-3 text-gray-600">
                 <div>
-                    <img class="w-full md:w-1/2 aspect-auto" src="/imgs/alamoda.jpg" />
+                    <img class="cursor-pointer image w-full md:w-1/2 aspect-auto" src="/imgs/alamoda.jpg" />
                     <p>example of the final generated image</p>
                 </div>
             </div>
@@ -101,7 +104,31 @@
         <div class="py-5">
             <a class="underline" href="/building.html">back</a>
         </div>
+
+        <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
+            id="modal">
+            <img id="modalImage" class="max-w-full max-h-full" src="">
+        </div>
+
     </div>
+
+    <script>
+        let modal = document.getElementById("modal");
+        let modalImg = document.getElementById("modalImage");
+        let images = document.querySelectorAll(".image");
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        modal.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+    </script>
+
 </body>
 
 </html>
