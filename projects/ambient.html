@@ -34,50 +34,47 @@
 
         <h2 class="text-md font-bold pt-3">tldr</h2>
         <p class="max-w-full md:max-w-xl">
-            - fully developed from scratch the code for the vr software in unity using c#<br>
-            - implemented real-time multyplayer system in vr<br>
+            - developed the vr software from scratch using c# in unity<br>
+            - implemented a real-time multiplayer system in vr<br>
             - deployed a custom photon server to aws<br>
-            - used php and photone engine web hooks to create a custom web server for the software<br>
+            - used php and photon engine webhooks to create a custom web server for the software<br>
             - deployed the custom web server to aws ec2<br>
         </p>
 
         <h2 class="text-md font-bold pt-3">overview</h2>
         <div class="max-w-full md:max-w-xl">
             <p class="pb-2">
-                in 2020, it became particularly difficult for interior designers to collaborate. by leveraging vr
-                technology, i created a collaborative (multiplayer) software for designers to collaborate in a virtual
+                in 2020, it became particularly difficult for interior designers to collaborate. leveraging vr
+                technology, i created a collaborative (multiplayer) software that allows designers to interact in a virtual
                 space.
             </p>
             <p class="pb-2">
-                i started by fully developing the vr client software from scratch using unity and c#. by leveraging my
-                expertise in
-                writing c# unity code i ensured that ambient software was well-structured, easy to maintain, performant,
-                modular,
-                and resuable.<br>
+                i started by developing the vr client software from scratch using unity and c#. leveraging my
+                expertise in writing c# unity code, i ensured that the ambient software was well-structured, easy to maintain, performant,
+                modular, and reusable.<br>
             </p>
             <p class="pb-2">
-                then, to implement the real-time vr multiplayer part of the software, i choose photon engine.<br>
-                this allowed users to interact with each other within the virtual environment and communicate through
+                to implement the real-time vr multiplayer part of the software, i chose the photon engine.<br>
+                this allowed users to interact within the virtual environment and communicate through
                 a voip system. <br>
-                the multiplayer part consists of 2 key components:<br>
-                - custom web server with a database<br>
-                - custom photon server
+                the multiplayer part consists of two key components:<br>
+                - a custom web server with a database<br>
+                - a custom photon server
             </p>
             <p class="pb-2">
                 for the web server, i deployed a php laravel server on aws elastic beanstalk. the key role of the server
-                is to listen to photon's web hook events and update the aws rds database accordingly.<br>
-                the custom web server facilitated seamless communication between the clients (unity)
+                is to listen to photon's webhook events and update the aws rds database accordingly.<br>
+                the custom web server facilitated seamless communication between the client's (unity)
                 application, allowing for efficient data management and processing.
             </p>
             <p class="pb-2">
-                the custom photon server was needed to allow customized behaviour in the photon event handling
+                i needed a custom photon server to allow customized behavior in the photon event handling
                 system.<br>
-                firsly, i edited the open source c# photon server code by introducing the needed events. then i deployed
-                the
-                photon server on a windows machine on aws ec2.
+                firstly, i edited the open-source c# photon server code by introducing the necessary events. then i deployed
+                the photon server on a windows machine on aws ec2.
             </p>
             <p class="pb-2">
-                finally, with the 3 components fully deployed (client application, server, photon server), the project
+                finally, with all three components fully deployed (client application, server, photon server), the project
                 was completed.
             </p>
         </div>
@@ -111,7 +108,7 @@
         </p>
 
         <div class="py-5">
-            <a href="/building.html">back</a>
+            <a class="underline" href="/building.html">back</a>
         </div>
     </div>
 </body>

@@ -35,7 +35,7 @@
         <p class="max-w-full md:max-w-xl">
             - designed and developed a fully responsive website frontend & backend from scratch<br>
             - created a landing page, rest api, dashboard panel, and blog<br>
-            - setup a linux machine to deploy the website<br>
+            - set up a linux machine to deploy the website<br>
             - deployed the website to aws<br>
         </p>
 
@@ -43,56 +43,35 @@
         <div class="max-w-full md:max-w-xl">
             <p class="pb-2">
                 i fully developed from scratch the openlabvr's website using php, js, and css.<br>
-                the website serves as a landing page, a server (rest api) for the unity software, and an admin dashboard for educators to
-                manage students' progress.<br>
-                the website also includes a blog section, with an admin panel to write, manage, and publish blogs
-                directly from the dashboard.
+                the website serves as a landing page, a server (rest api) for the unity software, and an admin dashboard for educators to manage students' progress.<br>
+                the website also includes a blog section, with an admin panel to write, manage, and publish blogs directly from the dashboard.
             </p>
             <p class="pb-2">
-                at its core, the website uses the php laravel framework to encapsulate all the other components.
-                i designed and developed the fully-responsive frontend using a combination of vue.js for the js, and
-                tailwind for the css.
+                at its core, the website uses the php laravel framework to encapsulate all other components.
+                i designed and developed the fully-responsive frontend using a combination of vue.js for the js, and tailwind for the css.
                 this allowed me to create a highly modular spa with reusable components.<br>
-                the frontend communicates with the backend using a monolith approach with inertia js. in the backend
-                i used laravel's actions to modularize logic and provide data directly to the frontend.
-                i implemented the system to have the data fetched and updated from the mysql database using laravel's
-                eloquent orm.<br>
+                the frontend communicates with the backend using a monolith approach with inertia js. in the backend, i used laravel's actions to modularize logic and provide data directly to the frontend.
+                i implemented a system to fetch and update data from the mysql database using laravel's eloquent orm.<br>
                 i also implemented roles for accounts, to give different authorizations in the dashboard to different types of users.
             </p>
             <p class="pb-2">
-                the website also includes 2 types of authentication that i implemented:<br>
+                the website also includes two types of authentication that i implemented:<br>
                 - regular email/password auth using laravel's fortify for direct access to the dashboard<br>
                 - jwt auth for the unity client to access the api<br>
             </p>
             <p class="pb-2">
-                i developed the website in my local environment in a linux vm (ubuntu) on my windows machine
-                using wsl.
-                i used docker to set up my customized local environment, writing a custom docker-compose file with all
-                the required
-                technologies.<br>
-                i then deployed the website to aws's lightsail. i chose lightsail instead of ec2 for the clear
-                and transparent up-front price.
-                the lightsail machine is an ubuntu 20.04 image that i then customized to fit the needs of the website.
-                <br>
-                i logged into the instance using an ssh key to set up the machine by
-                installing all the required technologies with the appropriate versions (nginx, php, node.js, mysql,
-                pm2).
-                i then cloned
-                the git repo, configured the static ip on the machine, wrote the nginx config file to allow
-                incoming traffic on the server, set up the dns using route 53 for a custom domain, and generated ssl
-                certificates with certbot
-                to implement
-                https.
+                i developed the website in my local environment on a linux vm (ubuntu) on my windows machine using wsl.
+                i used docker to set up my customized local environment, writing a custom docker-compose file with all the required technologies.<br>
+                i then deployed the website to aws's lightsail. i chose lightsail instead of ec2 for the clear and transparent up-front price.
+                the lightsail machine is an ubuntu 20.04 image that i then customized to fit the needs of the website.<br>
+                i logged into the instance using an ssh key to set up the machine, installing all the required technologies with the appropriate versions (nginx, php, node.js, mysql, pm2).
+                i then cloned the git repo, configured the static ip on the machine, wrote the nginx config file to allow incoming traffic on the server, set up the dns using route 53 for a custom domain, and generated ssl certificates with certbot to implement https.
             </p>
             <p class="pb-2">
-                i then set up a mysql database instance on aws's rds. i wired up the website with the mysql instance,
-                and ran the migrations to create all the necessary tables.
+                i set up a mysql database instance on aws's rds. i wired up the website with the mysql instance, and ran the migrations to create all the necessary tables.
             </p>
             <p class="pb-2">
-                to account for the seo problems that come with spas, i implemented pm2 on the machine to continuously
-                run a server-side
-                rendering
-                (ssr) script to render the website pages on the server.
+                to account for the seo problems that come with spas, i implemented pm2 on the machine to continuously run a server-side rendering (ssr) script to render the website pages on the server.
             </p>
             <p>
                 as the last step, i implemented google analytics on every page to allow everyone on the openlabvr team
@@ -128,7 +107,7 @@
         </p>
 
         <div class="py-5">
-            <a href="/building.html">back</a>
+            <a class="underline" href="/building.html">back</a>
         </div>
     </div>
 </body>
