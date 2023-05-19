@@ -7,74 +7,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">solarvr</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">vr training for solar module installation on a roof
-        </p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> discontinued</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> team of 2</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> unity, c#, vr, oculus</p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat solarvr</span></p>
+        <h1 class="text-cyan">solarvr - vr training for solar module installation on a roof</h1>
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> discontinued</h3>
+            <h3><span class="text-brightYellow">project team: </span> team of 2</h3>
+            <h3><span class="text-brightYellow">tags: </span> unity, c#, vr, oculus</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - fully developed the code for the software from scratch in unity using c#<br>
-            - implemented all the tool interactions<br>
-            - developed a step system to track the user's progress<br>
-        </p>
-
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                training students and professionals on solar module installation is a very demanding task.<br>
-                this is due to the considerable safety concerns involved in bringing people on an actual roof.<br>
-                for this reason, in collaboration with dr. cooley from the renewable energy department at santa monica
-                college, i developed solarvr.<br>
-                solarvr allows for training on solar module installation on a roof, while leveraging the safety and
-                immersion of vr.
-            </p>
-            <p class="pb-2">
-                to bring this project to life, i fully developed the software side of the project from scratch using
-                unity and c#.<br>
-                i implemented all the various tool interactions in the vr environment, ensuring a realistic and
-                practical training experience for users.<br>
-                this allows users to familiarize themselves with the necessary tools and procedures before performing
-                the task in the real world.
-            </p>
-            <p class="pb-2">
-                to effectively track the user's progress throughout the training, i also developed a step system in
-                unity.<br>
-                this feature allows users to follow a structured learning path, ensuring they master each aspect of
-                solar module installation before moving on to the next step.<br>
-            </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- fully developed the code for the software from scratch in unity using c#
+                </li>
+                <li class="ml-2">- implemented all the tool interactions</li>
+                <li class="ml-2">- developed a step system to track the user's progress</li>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - unity engine<br>
-            - c#<br>
-            - oculus sdk<br>
-            - git & github<br>
-        </p>
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    training students and professionals on solar module installation is a very demanding task.<br>
+                    this is due to the considerable safety concerns involved in bringing people on an actual roof.<br>
+                    for this reason, in collaboration with dr. cooley from the renewable energy department at santa
+                    monica
+                    college, i developed solarvr.<br>
+                    solarvr allows for training on solar module installation on a roof, while leveraging the safety and
+                    immersion of vr.
+                </p>
+                <p class="pb-2">
+                    to bring this project to life, i fully developed the software side of the project from scratch using
+                    unity and c#.<br>
+                    i implemented all the various tool interactions in the vr environment, ensuring a realistic and
+                    practical training experience for users.<br>
+                    this allows users to familiarize themselves with the necessary tools and procedures before
+                    performing
+                    the task in the real world.
+                </p>
+                <p class="pb-2">
+                    to effectively track the user's progress throughout the training, i also developed a step system in
+                    unity.<br>
+                    this feature allows users to follow a structured learning path, ensuring they master each aspect of
+                    solar module installation before moving on to the next step.<br>
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- unity engine</li>
+                <li class="ml-2">- c#</li>
+                <li class="ml-2">- oculus sdk</li>
+                <li class="ml-2">- git & github</li>
+            </ul>
+        </div>
+
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/OK2Go16Aph0" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -84,15 +93,20 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is available publicly on github:
-            <a href="" target="_blank">link</a>
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is available publicly on github:
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="" target="_blank">link</a></li>
+            </ul>
+            </p>
         </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+        
     </div>
 </body>
 

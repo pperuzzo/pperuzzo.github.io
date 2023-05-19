@@ -7,95 +7,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">reflow</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">
-            a lightweight kanban-style project management software inside the vscode sidebar.
-        </p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> active, in continuous development</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> team of 2</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> js, typescript, php, css</p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat reflow</span></p>
+        <h1 class="text-cyan">reflow - a lightweight kanban-style project management software inside the vscode sidebar
+        </h1>
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> active, in continuous development</h3>
+            <h3><span class="text-brightYellow">project team: </span> team of 2</h3>
+            <h3><span class="text-brightYellow">tags: </span> js, typescript, php, css</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - developed the frontend and backend of the extension in js and typescript<br>
-            - worked with the vscode api to seamlessly integrate reflow with vscode<br>
-            - implemented a networking system to allow for real-time collaboration<br>
-            - created the authentication and added integrations to github and google<br>
-            - developed a simple admin dashboard to manage the extension's users<br>
-            - generated ~400 downloads on vscode marketplace, ~100 active users
-        </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- developed the frontend and backend of the extension in js and typescript
+                </li>
+                <li class="ml-2">- worked with the vscode api to seamlessly integrate reflow with vscode</li>
+                <li class="ml-2">- implemented a networking system to allow for real-time collaboration</li>
+                <li class="ml-2">- created the authentication and added integrations to github and google</li>
+                <li class="ml-2">- developed a simple admin dashboard to manage the extension's users</li>
+                <li class="ml-2">- generated ~400 downloads on vscode marketplace, ~100 active users</li>
 
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                one of the main problems that every developer working on a big project faces is the struggle of managing
-                work across different programs.<br>
-                daily tasks are usually stored in a project management software, which is not connected to the code
-                base.<br>
-                reflow aims to solve exactly this problem.<br>
-                by bringing a lightweight collaborative kanban-style project management software inside vscode, it
-                allows developers to never leave their code editor and to reference code in their tasks.
-            </p>
-            <p class="pb-2">
-                i developed both the frontend and backend of the extension using javascript (vue.js) and typescript,
-                creating a robust and efficient solution. <br>
-                by working with the vscode api, i was able to seamlessly integrate reflow with the code editor.<br>
-                i also achieved a sense of integration by using the user's theme colors in the ui, and by recreating ui
-                components similar to the ones in vscode.
-            </p>
-            <p class="pb-2">
-                to enhance the user experience, i implemented a networking system that allows for real-time
-                collaboration.<br>
-                this enables users to work together on their projects with ease.<br>
-                in addition, i worked on the authentication system using jwt auth. to improve the user experience, i
-                integrated the auth system with third party providers such as github and google, ensuring a secure and
-                convenient sign-up process.
-            </p>
-            <p class="pb-2">
-                to facilitate the management of the extension's users, i developed a simple admin dashboard using php
-                laravel, vue.js and tailwind css.<br>
-                this tool allowed my teammates and me easy oversight and administration of the user base, ensuring a
-                smooth user experience for all.
-            </p>
-            <p class="pb-2">
-                the extension quickly gained traction on the vscode marketplace with 0 marketing dollars.<br>
-                reflow generated approximately 400 downloads and 100 active users.<br>
-                the success of reflow demonstrates its value in providing an efficient and collaborative solution for
-                developers, streamlining their workflow and enhancing productivity.
-            </p>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - js (vue.js, vscode extension api) <br>
-            - typescript<br>
-            - css (tailwind)<br>
-            - html<br>
-            - php (laravel)<br>
-            - rollup<br>
-            - webpack<br>
-        </p>
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    one of the main problems that every developer working on a big project faces is the struggle of
+                    managing
+                    work across different programs.<br>
+                    daily tasks are usually stored in a project management software, which is not connected to the code
+                    base.<br>
+                    reflow aims to solve exactly this problem.<br>
+                    by bringing a lightweight collaborative kanban-style project management software inside vscode, it
+                    allows developers to never leave their code editor and to reference code in their tasks.
+                </p>
+                <p class="pb-2">
+                    i developed both the frontend and backend of the extension using javascript (vue.js) and typescript,
+                    creating a robust and efficient solution. <br>
+                    by working with the vscode api, i was able to seamlessly integrate reflow with the code editor.<br>
+                    i also achieved a sense of integration by using the user's theme colors in the ui, and by recreating
+                    ui
+                    components similar to the ones in vscode.
+                </p>
+                <p class="pb-2">
+                    to enhance the user experience, i implemented a networking system that allows for real-time
+                    collaboration.<br>
+                    this enables users to work together on their projects with ease.<br>
+                    in addition, i worked on the authentication system using jwt auth. to improve the user experience, i
+                    integrated the auth system with third party providers such as github and google, ensuring a secure
+                    and
+                    convenient sign-up process.
+                </p>
+                <p class="pb-2">
+                    to facilitate the management of the extension's users, i developed a simple admin dashboard using
+                    php
+                    laravel, vue.js and tailwind css.<br>
+                    this tool allowed my teammates and me easy oversight and administration of the user base, ensuring a
+                    smooth user experience for all.
+                </p>
+                <p class="pb-2">
+                    the extension quickly gained traction on the vscode marketplace with 0 marketing dollars.<br>
+                    reflow generated approximately 400 downloads and 100 active users.<br>
+                    the success of reflow demonstrates its value in providing an efficient and collaborative solution
+                    for
+                    developers, streamlining their workflow and enhancing productivity.
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- js (vue.js, vscode extension api)</li>
+                <li class="ml-2">- typescript</li>
+                <li class="ml-2">- css (tailwind)</li>
+                <li class="ml-2">- html</li>
+                <li class="ml-2">- php (laravel)</li>
+                <li class="ml-2">- rollup</li>
+                <li class="ml-2">- webpack</li>
+
+            </ul>
+        </div>
+
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <img class="cursor-pointer image w-full aspect-auto" src="/imgs/reflow.png" />
                     <p>software demo</p>
@@ -107,23 +121,31 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is proprietary and not publicly available; however, it can be made
-            available for review upon request.
-        </p>
-
-        <h2 class="text-md font-bold pt-3">links</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - <a href="https://marketplace.visualstudio.com/items?itemName=Reflow.reflow" target="_blank">marketplace
-                link (download)</a><br>
-            - <a href="https://getreflow.com/" target="_blank">website</a><br>
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is proprietary and not publicly available; however, it can be made
+                available for review upon request.
+            </p>
         </div>
 
+        <!-- links -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">links</h2>
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline"
+                        href="https://marketplace.visualstudio.com/items?itemName=Reflow.reflow"
+                        target="_blank">marketplace link (download)</a></li>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://getreflow.com/"
+                        target="_blank">website</a></li>
+            </ul>
+        </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+
+        <!-- modal -->
         <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
             id="modal">
             <img id="modalImage" class="max-w-full max-h-full" src="">

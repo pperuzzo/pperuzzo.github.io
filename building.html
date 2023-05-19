@@ -2,58 +2,64 @@
 <html lang="en">
 
 <head>
-    <title>building</title>
+    <title>.building</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
+    <link href="main.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
-
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">building</h1>
-        <p class="pt-2">some of the things that i'm building / i've built in the past few years.</p>
-        <ul class="py-5">
-            <li class="pb-1">vr:</li>
-            <li class="pb-1"><a href="projects/openlabvr.html">openlab</a> - vr fully equipped science laboratories</li>
-            <li class="pb-1"><a href="projects/geodome.html">geodome</a> - vr shopping experience.</li>
-            <li class="pb-1"><a href="projects/ppin.html">3d ppin</a> - vr interactive protein-protein interaction
-                network visualizer
-            </li>
-            <li class="pb-1"><a href="projects/ambient.html">ambient</a> - vr real-time multiplayer collaboration tool
-                for designers</li>
-            <li class="pb-1"><a href="projects/solarvr.html">solarvr</a> - vr training for solar module installation
-            </li>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat .building</span></p>
+        <h1 class="text-cyan">.building</h1>
 
-            <li class="pt-2 pb-1">web:</li>
-            <li class="pb-1"><a href="projects/spaceflare.html">spaceflare</a> - platform for commercial property owners
-                to host clean energy technologies</li>
-            <li class="pb-1"><a href="projects/openlabvr-website.html">openlab website</a> - the website for the
-                openlabvr software</li>
-            <li class="pb-1"><a href="projects/proffinder.html">proffinder</a> - data-driven professor picker for
-                college students</li>
+        <!-- intro -->
+        <p class="pt-5">some of the things that i'm building / i've built in the past few years.</p>
 
-            <li class="pt-2 pb-1">others:</li>
-            <li class="pb-1"><a href="projects/alamoda.html">alamoda</a> - 50-80% discount for luxury fashion brands
-            </li>
-            <li class="pb-1"><a href="projects/reflow.html">reflow</a> - project management software inside the vscode
-                sidebar</li>
-            <li class="pb-1"><a href="projects/yuvo.html">yuvo</a> - app to discover nearby activities</li>
+        <!-- list -->
+        <div class="py-5">
 
-        </ul>
-        <a class="underline" href="/">back</a>
+            <!-- vr -->
+            <p class="pb-1">vr:</p>
+            <ul class="pb-5">
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/openlabvr.html">openlab</a> - vr fully
+                    equipped science laboratories</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/geodome.html">geodome</a> - vr shopping
+                    experience.</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/ppin.html">3d ppin</a> - vr interactive
+                    protein-protein interaction network visualizer</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/ambient.html">ambient</a> - vr real-time
+                    multiplayer collaboration tool for designers</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/solarvr.html">solarvr</a> - vr training
+                    for solar module installation</li>
+            </ul>
+
+            <!-- web -->
+            <p class="pb-1">web:</p>
+            <ul class="pb-5">
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/spaceflare.html">spaceflare</a> - platform for commercial property owners to host clean energy technologies</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/openlabvr-website.html">openlab website</a> - the website for the openlabvr software</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/proffinder.html">proffinder</a> - data-driven professor picker for college students</li>
+            </ul>
+
+            <!-- others -->
+            <p class="pb-1">others:</p>
+            <ul>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/reflow.html">reflow</a> - project management software inside the vscode sidebar</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/alamoda.html">alamoda</a> - 50-80% discount for luxury fashion brands</li>
+                <li class="ml-2"><a class="text-brightGreen hover:underline" href="projects/yuvo.html">yuvo</a> - app to discover nearby activities</li>
+            </ul>
+        </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/">back</a>
     </div>
 </body>
 

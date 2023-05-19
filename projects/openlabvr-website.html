@@ -7,123 +7,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">openlabvr (website)</h1>
-        <p class="pt-2 pb-1 max-w-full md:max-w-2xl">landing page + admin dashboard + api for the openlabvr software
-            (frontend + backend)</p>
-        <p class="pb-2 max-w-full md:max-w-2xl">for more, see <a href="/projects/openlabvr.html">openlabvr</a></p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> active, in continuous development</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> solo</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> php, js, css, sql, aws</p>
-        </div>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat openlabvr-website</span></p>
+        <h1 class="text-cyan">openlabvr website - landing page + admin dashboard + api for the openlabvr software</h1>
+        <p class="pb-2">for more, see <a class="text-brightGreen hover:underline"
+                href="/projects/openlabvr.html">openlabvr</a></p>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - designed and developed a fully responsive website frontend & backend from scratch<br>
-            - created a landing page, rest api, dashboard panel, and blog<br>
-            - set up a linux machine to deploy the website<br>
-            - deployed the website to aws<br>
-        </p>
-
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                i fully developed from scratch the openlabvr's website using php, js, and css.<br>
-                the website serves as a landing page, a server (rest api) for the unity software, and an admin dashboard
-                for educators to manage students' progress.<br>
-                the website also includes a blog section, with an admin panel to write, manage, and publish blogs
-                directly from the dashboard.
-            </p>
-            <p class="pb-2">
-                at its core, the website uses the php laravel framework to encapsulate all other components.
-                i designed and developed the fully-responsive frontend using a combination of vue.js for the js, and
-                tailwind for the css.
-                this allowed me to create a highly modular spa with reusable components.<br>
-                the frontend communicates with the backend using a monolith approach with inertia js. in the backend, i
-                used laravel's actions to modularize logic and provide data directly to the frontend.
-                i implemented a system to fetch and update data from the mysql database using laravel's eloquent
-                orm.<br>
-                i also implemented roles for accounts, to give different authorizations in the dashboard to different
-                types of users.
-            </p>
-            <p class="pb-2">
-                the website also includes two types of authentication that i implemented:<br>
-                - regular email/password auth using laravel's fortify for direct access to the dashboard<br>
-                - jwt auth for the unity client to access the api<br>
-            </p>
-            <p class="pb-2">
-                i developed the website in my local environment on a linux vm (ubuntu) on my windows machine using wsl.
-                i used docker to set up my customized local environment, writing a custom docker-compose file with all
-                the required technologies.<br>
-                i then deployed the website to aws's lightsail. i chose lightsail instead of ec2 for the clear and
-                transparent up-front price.
-                the lightsail machine is an ubuntu 20.04 image that i then customized to fit the needs of the
-                website.<br>
-                i logged into the instance using an ssh key to set up the machine, installing all the required
-                technologies with the appropriate versions (nginx, php, node.js, mysql, pm2).
-                i then cloned the git repo, configured the static ip on the machine, wrote the nginx config file to
-                allow incoming traffic on the server, set up the dns using route 53 for a custom domain, and generated
-                ssl certificates with certbot to implement https.
-            </p>
-            <p class="pb-2">
-                i set up a mysql database instance on aws's rds. i wired up the website with the mysql instance, and ran
-                the migrations to create all the necessary tables.
-            </p>
-            <p class="pb-2">
-                to account for the seo problems that come with spas, i implemented pm2 on the machine to continuously
-                run a server-side rendering (ssr) script to render the website pages on the server.
-            </p>
-            <p>
-                as the last step, i implemented google analytics on every page to allow everyone on the openlabvr team
-                to
-                check traffic and conversions.
-            </p>
-        </div>
-
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - php (laravel)<br>
-            - js (node, vue.js, inertia.js)<br>
-            - css (tailwind)<br>
-            - html <br>
-            - sql (mysql)<br>
-            - aws (rds, lightsail, s3, route53)<br>
-            - linux (ubuntu, wsl)<br>
-            - nginx<br>
-            - docker<br>
-            - git & github<br>
-            - google analytics
-        </p>
-
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is proprietary and not publicly available; however, it can be made
-            available for review upon request.
-        </p>
-
-        <h2 class="text-md font-bold pt-3">links</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - <a href="https://openlabvr.com/" target="_blank">live website</a><br>
-        </p>
-
+        <!-- info -->
         <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+            <h3><span class="text-brightYellow">project status:</span> active, in continuous development</h3>
+            <h3><span class="text-brightYellow">project team: </span> solo</h3>
+            <h3><span class="text-brightYellow">tags: </span> php, js, css, sql, aws</h3>
         </div>
+
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- designed and developed a fully responsive website frontend & backend from scratch
+                </li>
+                <li class="ml-2">- created a landing page, rest api, dashboard panel, and blog</li>
+                <li class="ml-2">- set up a linux machine to deploy the website</li>
+                <li class="ml-2">- deployed the website to aws</li>
+
+            </ul>
+        </div>
+
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    i fully developed from scratch the openlabvr's website using php, js, and css.<br>
+                    the website serves as a landing page, a server (rest api) for the unity software, and an admin
+                    dashboard
+                    for educators to manage students' progress.<br>
+                    the website also includes a blog section, with an admin panel to write, manage, and publish blogs
+                    directly from the dashboard.
+                </p>
+                <p class="pb-2">
+                    at its core, the website uses the php laravel framework to encapsulate all other components.
+                    i designed and developed the fully-responsive frontend using a combination of vue.js for the js, and
+                    tailwind for the css.
+                    this allowed me to create a highly modular spa with reusable components.<br>
+                    the frontend communicates with the backend using a monolith approach with inertia js. in the
+                    backend, i
+                    used laravel's actions to modularize logic and provide data directly to the frontend.
+                    i implemented a system to fetch and update data from the mysql database using laravel's eloquent
+                    orm.<br>
+                    i also implemented roles for accounts, to give different authorizations in the dashboard to
+                    different
+                    types of users.
+                </p>
+                <p class="pb-2">
+                    the website also includes two types of authentication that i implemented:<br>
+                    - regular email/password auth using laravel's fortify for direct access to the dashboard<br>
+                    - jwt auth for the unity client to access the api<br>
+                </p>
+                <p class="pb-2">
+                    i developed the website in my local environment on a linux vm (ubuntu) on my windows machine using
+                    wsl.
+                    i used docker to set up my customized local environment, writing a custom docker-compose file with
+                    all
+                    the required technologies.<br>
+                    i then deployed the website to aws's lightsail. i chose lightsail instead of ec2 for the clear and
+                    transparent up-front price.
+                    the lightsail machine is an ubuntu 20.04 image that i then customized to fit the needs of the
+                    website.<br>
+                    i logged into the instance using an ssh key to set up the machine, installing all the required
+                    technologies with the appropriate versions (nginx, php, node.js, mysql, pm2).
+                    i then cloned the git repo, configured the static ip on the machine, wrote the nginx config file to
+                    allow incoming traffic on the server, set up the dns using route 53 for a custom domain, and
+                    generated
+                    ssl certificates with certbot to implement https.
+                </p>
+                <p class="pb-2">
+                    i set up a mysql database instance on aws's rds. i wired up the website with the mysql instance, and
+                    ran
+                    the migrations to create all the necessary tables.
+                </p>
+                <p class="pb-2">
+                    to account for the seo problems that come with spas, i implemented pm2 on the machine to
+                    continuously
+                    run a server-side rendering (ssr) script to render the website pages on the server.
+                </p>
+                <p>
+                    as the last step, i implemented google analytics on every page to allow everyone on the openlabvr
+                    team
+                    to
+                    check traffic and conversions.
+                </p>
+            </div>
+        </div>
+
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- php (laravel)</li>
+                <li class="ml-2">- js (node, vue.js, inertia.js)</li>
+                <li class="ml-2">- css (tailwind)</li>
+                <li class="ml-2">- html</li>
+                <li class="ml-2">- sql (mysql)</li>
+                <li class="ml-2">- aws (rds, lightsail, s3, route53)</li>
+                <li class="ml-2">- linux (ubuntu, wsl)</li>
+                <li class="ml-2">- nginx</li>
+                <li class="ml-2">- docker</li>
+                <li class="ml-2">- git & github</li>
+                <li class="ml-2">- google analytics</li>
+            </ul>
+        </div>
+
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is proprietary and not publicly available; however, it can be made
+                available for review upon request.
+            </p>
+        </div>
+
+        <!-- links -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">links</h2>
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://openlabvr.com/"
+                        target="_blank">live website</a></li>
+            </ul>
+        </div>
+
+        <!-- back-->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+        
     </div>
 </body>
 

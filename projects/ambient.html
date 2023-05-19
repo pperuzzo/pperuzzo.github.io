@@ -7,97 +7,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">ambient</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">vr real-time multiplayer collaboration tool for designers
-        </p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> discountinued</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> team of 2</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> unity, c#, vr, oculus, photon, aws, php, sql
-            </p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat ambient</span></p>
+        <h1 class="text-cyan">ambient - vr real-time multiplayer collaboration tool for designers</h1>
+
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> discountinued</h3>
+            <h3><span class="text-brightYellow">project team: </span> team of 2</h3>
+            <h3><span class="text-brightYellow">tags: </span> unity, c#, vr, oculus, photon, aws, php, sql</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - developed the vr software from scratch using c# in unity<br>
-            - implemented a real-time multiplayer system in vr<br>
-            - deployed a custom photon server to aws<br>
-            - used php and photon engine webhooks to create a custom web server for the software<br>
-            - deployed the custom web server to aws ec2<br>
-        </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- developed the vr software from scratch using c# in unity</li>
+                <li class="ml-2">- implemented a real-time multiplayer system in vr</li>
+                <li class="ml-2">- deployed a custom photon server to aws</li>
+                <li class="ml-2">- used php and photon engine webhooks to create a custom web server for the software
+                </li>
+                <li class="ml-2">- deployed the custom web server to aws ec2</li>
 
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                in 2020, it became particularly difficult for interior designers to collaborate. leveraging vr
-                technology, i created a collaborative (multiplayer) software that allows designers to interact in a
-                virtual
-                space.
-            </p>
-            <p class="pb-2">
-                i started by developing the vr client software from scratch using unity and c#. leveraging my
-                expertise in writing c# unity code, i ensured that the ambient software was well-structured, easy to
-                maintain, performant,
-                modular, and reusable.<br>
-            </p>
-            <p class="pb-2">
-                to implement the real-time vr multiplayer part of the software, i chose the photon engine.<br>
-                this allowed users to interact within the virtual environment and communicate through
-                a voip system. <br>
-                the multiplayer part consists of two key components:<br>
-                - a custom web server with a database<br>
-                - a custom photon server
-            </p>
-            <p class="pb-2">
-                for the web server, i deployed a php laravel server on aws elastic beanstalk. the key role of the server
-                is to listen to photon's webhook events and update the aws rds database accordingly.<br>
-                the custom web server facilitated seamless communication between the client's (unity)
-                application, allowing for efficient data management and processing.
-            </p>
-            <p class="pb-2">
-                i needed a custom photon server to allow customized behavior in the photon event handling
-                system.<br>
-                firstly, i edited the open-source c# photon server code by introducing the necessary events. then i
-                deployed
-                the photon server on a windows machine on aws ec2.
-            </p>
-            <p class="pb-2">
-                finally, with all three components fully deployed (client application, server, photon server), the
-                project
-                was completed.
-            </p>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - unity engine<br>
-            - c#<br>
-            - oculus sdk<br>
-            - photon engine<br>
-            - photon server<br>
-            - aws (ec2, s3, rds, elastic beanstalk)<br>
-            - php (laravel)<br>
-            - sql (mysql)
-        </p>
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    in 2020, it became particularly difficult for interior designers to collaborate. leveraging vr
+                    technology, i created a collaborative (multiplayer) software that allows designers to interact in a
+                    virtual
+                    space.
+                </p>
+                <p class="pb-2">
+                    i started by developing the vr client software from scratch using unity and c#. leveraging my
+                    expertise in writing c# unity code, i ensured that the ambient software was well-structured, easy to
+                    maintain, performant,
+                    modular, and reusable.<br>
+                </p>
+                <p class="pb-2">
+                    to implement the real-time vr multiplayer part of the software, i chose the photon engine.<br>
+                    this allowed users to interact within the virtual environment and communicate through
+                    a voip system. <br>
+                    the multiplayer part consists of two key components:<br>
+                    - a custom web server with a database<br>
+                    - a custom photon server
+                </p>
+                <p class="pb-2">
+                    for the web server, i deployed a php laravel server on aws elastic beanstalk. the key role of the
+                    server
+                    is to listen to photon's webhook events and update the aws rds database accordingly.<br>
+                    the custom web server facilitated seamless communication between the client's (unity)
+                    application, allowing for efficient data management and processing.
+                </p>
+                <p class="pb-2">
+                    i needed a custom photon server to allow customized behavior in the photon event handling
+                    system.<br>
+                    firstly, i edited the open-source c# photon server code by introducing the necessary events. then i
+                    deployed
+                    the photon server on a windows machine on aws ec2.
+                </p>
+                <p class="pb-2">
+                    finally, with all three components fully deployed (client application, server, photon server), the
+                    project
+                    was completed.
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- unity engine</li>
+                <li class="ml-2">- c#</li>
+                <li class="ml-2">- oculus sdk</li>
+                <li class="ml-2">- photon engine</li>
+                <li class="ml-2">- photon server</li>
+                <li class="ml-2">- aws (ec2, s3, rds, elastic beanstalk)</li>
+                <li class="ml-2">- php (laravel)</li>
+                <li class="ml-2">- sql (mysql)</li>
+            </ul>
+        </div>
+
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/rFjk7ECljsY" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -107,17 +116,20 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is available publicly on github:<br>
-            <a href="" target="_blank">code (unity client)</a><br>
-            <a href="https://github.com/pperuzzo/ambient-server" target="_blank">code (web server)</a><br>
-            <a href="https://github.com/pperuzzo/ambient-photon-server" target="_blank">code (photon server)</a><br>
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is available publicly on github:
+            </p>
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="" target="_blank">code (unity client)</a></li>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://github.com/pperuzzo/ambient-server" target="_blank">code (web server)</a></li>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://github.com/pperuzzo/ambient-photon-server" target="_blank">code (photon server)</a></li>
+            </ul>
         </div>
+
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
     </div>
 </body>
 

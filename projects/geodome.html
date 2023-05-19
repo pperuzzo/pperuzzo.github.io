@@ -7,104 +7,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="px-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">geodome</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">vr shopping experience for luxury brands
-        </p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> discountinued</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> team of 2</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> unity, c#, vr, oculus sdk, photogrammetry</p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat geodome</span></p>
+        <h1 class="text-cyan">geodome - vr shopping experience for luxury brands</h1>
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> discountinued</h3>
+            <h3><span class="text-brightYellow">project team: </span> team of 2</h3>
+            <h3><span class="text-brightYellow">tags: </span> unity, c#, vr, oculus sdk, photogrammetry</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - developed the software code from scratch in unity using c#<br>
-            - created different virtual stores for different brands<br>
-            - worked on cloth simulation solutions for vr<br>
-            - implemented an ai assistant using ibm watson<br>
-            - optimized the software for gpu performance on pcvr<br>
-            - managed and worked closely with 3d artists<br>
-            - worked with a 3d scanner to reproduce realistic clothing<br>
-        </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- developed the software code from scratch in unity using c#
+                </li>
+                <li class="ml-2">- created different virtual stores for different brands</li>
+                <li class="ml-2">- worked on cloth simulation solutions for vr</li>
+                <li class="ml-2">- implemented an ai assistant using ibm watson</li>
+                <li class="ml-2">- optimized the software for gpu performance on standalone/pcvr</li>
+                <li class="ml-2">- managed and worked closely with 3d artists</li>
+                <li class="ml-2">- worked with a 3d scanner to reproduce realistic clothing</li>
 
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                geodome allows fashion brands to gain exposure in high traffic areas at a fraction of the cost.<br>
-                by placing vr headsets in strategically located kiosks, shoppers can explore brands' virtual stores by
-                wearing a vr headset in the kiosk.
-            </p>
-            <p class="pb-2">
-                i wrote the code for the vr software from scratch using unity and c#.<br>
-                this included writing all the logic for the virtual shops, importing brand catalogs, and exploring
-                cloth simulation solutions.<br>
-                i integrated all interactions using the oculus sdk, adding custom logic to a few key interaction
-                components.<br>
-                my expertise in unity and c# allowed me to build a well-structured and high-performing application that
-                met all the requirements.
-            </p>
-            <p class="pb-2">
-                implementing a performant cloth simulation solution for vr was a challenging task.<br>
-                by focusing on a tradeoff solution, i created a realistic experience while meeting performance
-                requirements. this feature enhanced the overall immersion of the software for the end user.
-            </p>
-            <p class="pb-2">
-                to provide a more interactive and helpful user experience, i implemented an ai assistant with speech to
-                text functionality using ibm watson.<br>
-                i designed this ai assistant starting from the ibm dashboard's logical implementation, and then wired
-                the
-                system to the in-game ui. the ai assistant helped guide users through the virtual stores, answering
-                questions,
-                and providing customized filters.<br>
-                this led to a more seamless vr user experience while navigating the virtual stores.
-            </p>
-            <p class="pb-2">
-                i also ensured that the software was optimized for pcvr.<br>
-                i debugged the software using unity's profiler, and oculus's ovrmetrics. the software optimization
-                ensured that geodome ran smoothly and efficiently on a variety of pcvr hardware configurations.<br>
-                this allowed for a consistent and enjoyable experience for all users.
-            </p>
-            <p class="pb-2">
-                throughout the project, i managed and worked closely with a team of 3d artists.<br>
-                by providing strict modeling and texturing requirements, i was able to achieve the performance
-                targets.<br>
-                closely managing 3d artists allowed me to create visually pleasing and performant virtual stores for
-                brands.
-            </p>
-            <p>
-                lastly, i worked with a 3d scanner to scan and reproduce realistic clothing for the virtual stores.<br>
-                by using this technology, i was able to create highly accurate and detailed clothing models, further
-                enhancing the realism and immersion of the software.
-            </p>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - unity engine<br>
-            - c#<br>
-            - oculus sdk<br>
-            - photogrammetry<br>
-        </p>
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    geodome allows fashion brands to gain exposure in high traffic areas at a fraction of the cost.<br>
+                    by placing vr headsets in strategically located kiosks, shoppers can explore brands' virtual stores
+                    by
+                    wearing a vr headset in the kiosk.
+                </p>
+                <p class="pb-2">
+                    i wrote the code for the vr software from scratch using unity and c#.<br>
+                    this included writing all the logic for the virtual shops, importing brand catalogs, and exploring
+                    cloth simulation solutions.<br>
+                    i integrated all interactions using the oculus sdk, adding custom logic to a few key interaction
+                    components.<br>
+                    my expertise in unity and c# allowed me to build a well-structured and high-performing application
+                    that
+                    met all the requirements.
+                </p>
+                <p class="pb-2">
+                    implementing a performant cloth simulation solution for vr was a challenging task.<br>
+                    by focusing on a tradeoff solution, i created a realistic experience while meeting performance
+                    requirements. this feature enhanced the overall immersion of the software for the end user.
+                </p>
+                <p class="pb-2">
+                    to provide a more interactive and helpful user experience, i implemented an ai assistant with speech
+                    to
+                    text functionality using ibm watson.<br>
+                    i designed this ai assistant starting from the ibm dashboard's logical implementation, and then
+                    wired
+                    the
+                    system to the in-game ui. the ai assistant helped guide users through the virtual stores, answering
+                    questions,
+                    and providing customized filters.<br>
+                    this led to a more seamless vr user experience while navigating the virtual stores.
+                </p>
+                <p class="pb-2">
+                    i also ensured that the software was optimized for pcvr.<br>
+                    i debugged the software using unity's profiler, and oculus's ovrmetrics. the software optimization
+                    ensured that geodome ran smoothly and efficiently on a variety of pcvr hardware configurations.<br>
+                    this allowed for a consistent and enjoyable experience for all users.
+                </p>
+                <p class="pb-2">
+                    throughout the project, i managed and worked closely with a team of 3d artists.<br>
+                    by providing strict modeling and texturing requirements, i was able to achieve the performance
+                    targets.<br>
+                    closely managing 3d artists allowed me to create visually pleasing and performant virtual stores for
+                    brands.
+                </p>
+                <p>
+                    lastly, i worked with a 3d scanner to scan and reproduce realistic clothing for the virtual
+                    stores.<br>
+                    by using this technology, i was able to create highly accurate and detailed clothing models, further
+                    enhancing the realism and immersion of the software.
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- unity engine</li>
+                <li class="ml-2">- c#</li>
+                <li class="ml-2">- oculus sdk</li>
+                <li class="ml-2">- photogrammetry</li>
+            </ul>
+        </div>
 
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/EbbF31KGpQk" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -138,16 +150,19 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is proprietary and not publicly available; however, it can be made
-            available for review upon request.
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is proprietary and not publicly available; however, it can be made
+                available for review upon request.
+            </p>
         </div>
 
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+
+        <!-- Modal -->
         <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
             id="modal">
             <img id="modalImage" class="max-w-full max-h-full" src="">

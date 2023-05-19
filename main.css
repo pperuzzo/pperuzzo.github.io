@@ -1,0 +1,71 @@
+.bg-background {
+    background-color: #000807;
+}
+
+.text-foreground {
+    color: #ff3270;
+}
+
+.text-black {
+    color: #65737e;
+}
+
+.text-blue {
+    color: #00a2ff;
+}
+
+.text-brightBlack {
+    color: #eeffff;
+}
+
+.text-brightBlue {
+    color: #2088ff;
+}
+
+.text-brightCyan {
+    color: #89ddff;
+}
+
+.text-brightGreen {
+    color: #00ff9c;
+}
+
+.text-brightPurple {
+    color: #b700ff;
+}
+
+.text-brightRed {
+    color: #ff0059;
+}
+
+.text-brightWhite {
+    color: #eeffff;
+}
+
+.text-brightYellow {
+    color: #fffc58;
+}
+
+.text-cyan {
+    color: #00c3ff;
+}
+
+.text-green {
+    color: #9dff00;
+}
+
+.text-purple {
+    color: #a200ff;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-yellow {
+    color: #ffff00;
+}

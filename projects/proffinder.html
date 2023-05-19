@@ -7,98 +7,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">proffinder</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">data-driven professor picker for
-            college students/p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> discontinued</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> solo</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> python, php, js, css, sql, aws</p>
-        </div>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat proffinder</span></p>
+        <h1 class="text-cyan">proffinder - data-driven professor picker for college students</h1>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - wrote a python program to scrape grade distribution data from online pdfs<br>
-            - designed and developed a fully responsive website frontend & backend from scratch<br>
-            - deployed the website to aws<br>
-            - reached 20,000 students at santa monica college
-        </p>
-
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                sooner or later, every college student is faced with the important decision of choosing the right
-                professor for their classes.<br>
-                the options are either to use biased sources (such as ratemyprofessor), or rely on word of mouth.<br>
-                proffinder provides a different approach to finding professors: making data-driven decisions.
-            </p>
-            <p class="pb-2">
-                i started by writing a python program to scrape grade distribution data from online available pdfs.<br>
-                this allowed me to effectively extract the necessary information to be used for further analysis. the
-                scraping system allowed for a streamlined data gathering process.
-            </p>
-            <p class="pb-2">
-                next, i designed and developed a fully responsive website frontend and backend from scratch.<br>
-                i used php laravel for the backend, vue.js and tailwind for the frontend. using my skills in web
-                development, i was able to create an attractive and user-friendly platform to replace having to deal
-                with raw disorganized pdf data.<br>
-                i built the website with a specific target audience in mind, ensuring that it provided a seamless and
-                enjoyable experience for students.
-            </p>
-            <p class="pb-2">
-                once completed, i deployed the website to aws using elastic beanstalk (ec2, s3, rds).<br>
-                using ssh, i logged into the linux machine and configured all the necessary components to allow my
-                laravel application to function properly.<br>
-                this allowed the website to perform optimally, providing users with quick access to valuable historical
-                data for each professor/class.
-            </p>
-            <p class="pb-2">
-                the website quickly gained popularity among santa monica college students, reaching more than 20k
-                visits.<br>
-                this significant user base demonstrated the project's success in addressing the needs of students and
-                providing them with essential information to enhance their academic experiences.
-            </p>
-        </div>
-
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - python<br>
-            - php (laravel)<br>
-            - js (node, vue.js, inertia.js)<br>
-            - css (tailwind)<br>
-            - html <br>
-            - sql (mysql)<br>
-            - aws (rds, ec2, s3, route53)<br>
-            - linux<br>
-            - nginx<br>
-            - git & github<br>
-            - google analytics
-        </p>
-
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is available publicly on github:
-            <a href="https://github.com/pperuzzo/proffinder" target="_blank">link</a>
-        </p>
-
+        <!-- info -->
         <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+            <h3><span class="text-brightYellow">project status:</span> discontinued</h3>
+            <h3><span class="text-brightYellow">project team: </span> solo</h3>
+            <h3><span class="text-brightYellow">tags: </span> python, php, js, css, sql, aws</h3>
         </div>
+
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- wrote a python program to scrape grade distribution data from online pdfs
+                </li>
+                <li class="ml-2">- designed and developed a fully responsive website frontend & backend from scratch
+                </li>
+                <li class="ml-2">- deployed the website to aws</li>
+                <li class="ml-2">- reached 20,000 students at santa monica college</li>
+
+            </ul>
+        </div>
+
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    sooner or later, every college student is faced with the important decision of choosing the right
+                    professor for their classes.<br>
+                    the options are either to use biased sources (such as ratemyprofessor), or rely on word of
+                    mouth.<br>
+                    proffinder provides a different approach to finding professors: making data-driven decisions.
+                </p>
+                <p class="pb-2">
+                    i started by writing a python program to scrape grade distribution data from online available
+                    pdfs.<br>
+                    this allowed me to effectively extract the necessary information to be used for further analysis.
+                    the
+                    scraping system allowed for a streamlined data gathering process.
+                </p>
+                <p class="pb-2">
+                    next, i designed and developed a fully responsive website frontend and backend from scratch.<br>
+                    i used php laravel for the backend, vue.js and tailwind for the frontend. using my skills in web
+                    development, i was able to create an attractive and user-friendly platform to replace having to deal
+                    with raw disorganized pdf data.<br>
+                    i built the website with a specific target audience in mind, ensuring that it provided a seamless
+                    and
+                    enjoyable experience for students.
+                </p>
+                <p class="pb-2">
+                    once completed, i deployed the website to aws using elastic beanstalk (ec2, s3, rds).<br>
+                    using ssh, i logged into the linux machine and configured all the necessary components to allow my
+                    laravel application to function properly.<br>
+                    this allowed the website to perform optimally, providing users with quick access to valuable
+                    historical
+                    data for each professor/class.
+                </p>
+                <p class="pb-2">
+                    the website quickly gained popularity among santa monica college students, reaching more than 20k
+                    visits.<br>
+                    this significant user base demonstrated the project's success in addressing the needs of students
+                    and
+                    providing them with essential information to enhance their academic experiences.
+                </p>
+            </div>
+        </div>
+
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- python</li>
+                <li class="ml-2">- php (laravel)</li>
+                <li class="ml-2">- js (node, vue.js, inertia.js)</li>
+                <li class="ml-2">- css (tailwind)</li>
+                <li class="ml-2">- html</li>
+                <li class="ml-2">- sql (mysql)</li>
+                <li class="ml-2">- aws (rds, ec2, s3, route53)</li>
+                <li class="ml-2">- linux</li>
+                <li class="ml-2">- nginx</li>
+                <li class="ml-2">- git & github</li>
+                <li class="ml-2">- google analytics</li>
+            </ul>
+        </div>
+
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is available publicly on github:
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline"
+                        href="https://github.com/pperuzzo/proffinder" target="_blank">link</a></li>
+            </ul>
+            </p>
+        </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+
     </div>
 </body>
 

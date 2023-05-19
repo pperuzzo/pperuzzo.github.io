@@ -7,81 +7,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="px-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">alamoda</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">
-            a platform that provides 50-80% discount for luxury fashion brands
-        </p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> active, in continuous development</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> solo</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> python, web scraping, aws, html, css</p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat alamoda</span></p>
+        <h1 class="text-cyan">alamoda - a platform that provides 50-80% discount for luxury fashion brands</h1>
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> active, in continuous development</h3>
+            <h3><span class="text-brightYellow">project team: </span> solo</h3>
+            <h3><span class="text-brightYellow">tags: </span> python, web scraping, aws, html, css</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - developed a web scraper from scratch to find and download product images from google<br>
-            - created a python script to automatically generate instagram stories from product images<br>
-            - designed and developed alamoda's landing page
-        </p>
-
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                alamoda collaborates with the top fashion boutiques in italy to bring designer fashion brands to the us
-                market
-                at heavily discounted prices.<br>
-                after personally forging a partnership with one of the largest boutiques in italy, i had to devise a
-                method to obtain high-quality product
-                images starting from a list of skus.
-            </p>
-            <p class="pb-2">
-                i developed a custom web scraper from scratch using python and beautifulsoup to efficiently search for
-                and
-                download product images
-                starting from the product sku provided by the boutiques.<br>
-                i designed the scraper to target specific keywords and collect relevant images, ensuring
-                that only high-quality and suitable images were gathered.
-            </p>
-            <p class="pb-2">
-                i then created another python script to automatically superimpose the scraped images on a predefined
-                background
-                and then apply relevant text as an overlay.<br>
-                this allows for the seamless generation of product pictures for alamoda's
-                social media, saving time and enabling the marketing team to concentrate on other significant tasks.
-            </p>
-            <p>
-                finally, i developed a visually appealing landing page for alamoda using plain html and css.<br>
-                the landing page provides visitors with essential information about the business, directs them to
-                our social media, and ultimately assists in converting them into our customers.
-            </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- developed a web scraper from scratch to find and download product images from google
+                </li>
+                <li class="ml-2">- created a python script to automatically generate instagram stories from product
+                    images</li>
+                <li class="ml-2">- designed and developed alamoda's landing page</li>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - python<br>
-            - aws (api gateway)<br>
-            - html<br>
-            - css
-        </p>
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    alamoda collaborates with the top fashion boutiques in italy to bring designer fashion brands to the us
+                    market
+                    at heavily discounted prices.<br>
+                    after personally forging a partnership with one of the largest boutiques in italy, i had to devise a
+                    method to obtain high-quality product
+                    images starting from a list of skus.
+                </p>
+                <p class="pb-2">
+                    i developed a custom web scraper from scratch using python and beautifulsoup to efficiently search for
+                    and
+                    download product images
+                    starting from the product sku provided by the boutiques.<br>
+                    i designed the scraper to target specific keywords and collect relevant images, ensuring
+                    that only high-quality and suitable images were gathered.
+                </p>
+                <p class="pb-2">
+                    i then created another python script to automatically superimpose the scraped images on a predefined
+                    background
+                    and then apply relevant text as an overlay.<br>
+                    this allows for the seamless generation of product pictures for alamoda's
+                    social media, saving time and enabling the marketing team to concentrate on other significant tasks.
+                </p>
+                <p>
+                    finally, i developed a visually appealing landing page for alamoda using plain html and css.<br>
+                    the landing page provides visitors with essential information about the business, directs them to
+                    our social media, and ultimately assists in converting them into our customers.
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- python</li>
+                <li class="ml-2">- aws (api gateway)</li>
+                <li class="ml-2">- html</li>
+                <li class="ml-2">- css</li>
+            </ul>
+        </div>
+
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <img class="cursor-pointer image w-full md:w-1/2 aspect-auto" src="/imgs/alamoda.jpg" />
                     <p>example of the final generated image</p>
@@ -89,22 +96,28 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is proprietary and not publicly available; however, it can be made
-            available for review upon request.
-        </p>
-
-        <h2 class="text-md font-bold pt-3">links</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - <a href="https://alamodainc.com/" target="_blank">landing page</a><br>
-            - <a href="https://www.instagram.com/alamodainc/" target="_blank">instagram page</a><br>
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is proprietary and not publicly available; however, it can be made
+                available for review upon request.
+            </p>
         </div>
 
+        <!-- links -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">links</h2>
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://alamodainc.com/" target="_blank">landing page</a></li>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://www.instagram.com/alamodainc/" target="_blank">instagram page</a></li>
+            </ul>
+        </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+
+        <!-- modal -->
         <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
             id="modal">
             <img id="modalImage" class="max-w-full max-h-full" src="">

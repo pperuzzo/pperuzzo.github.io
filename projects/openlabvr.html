@@ -7,103 +7,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">openlabvr</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">a vr software for the oculus quest headset that provides interactive
-            fully-equipped
-            science laboratories for high school and university students.
-        </p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> active, in continuous development</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> team of 2</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> unity, c#, c++, vr, oculus, blender</p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat alamoda</span></p>
+        <h1 class="text-cyan">openlabvr - a vr software for the oculus quest headset that provides interactive
+            fully-equipped science laboratories for high school and university students.</h1>
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> active, in continuous development</h3>
+            <h3><span class="text-brightYellow">project team: </span> team of 2</h3>
+            <h3><span class="text-brightYellow">tags: </span> unity, c#, c++, vr, oculus, blender</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - developed from scratch the majority of the code for the software in unity using c#<br>
-            - developed a parser to create vr experiences from a json object<br>
-            - wrote unmanaged libraries for the unity software in c++<br>
-            - debugged and profiled the unity software for cpu/gpu performance<br>
-            - implemented all vr interactions with hand-tracking and the oculus sdk<br>
-            - implemented api communication with the web server (see <a href="/projects/openlabvr-website.html">openlab
-                website</a>)<br>
-            - coordinated a team of 3d modelers and programmers<br>
-        </p>
-
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                the covid-19 pandemic has more clearly exposed the need for better training for stem students.<br>
-                stem laboratories in schools are highly inaccessible due to safety concerns, limited equipment,
-                and lack of materials.<br>
-                for these reasons, i created openlabvr, a platform that provides fully equipped science laboratories
-                in vr.<br>
-                leveraging hand-tracking technology, openlab provides realistic interactions with lab objects,
-                helping students build up confidence before entering a real laboratory.
-            </p>
-            <p class="pb-2">
-                as the cto for the project, i wrote the majority of the code in unity c#, focusing on creating
-                modular and reusable components for the vr software.<br>
-                i also developed a custom parser to generate vr experiences from json files to allow for
-                faster experience development, and to maximize code reutilization.<br>
-                another key component of the software that i wrote was the integration with unmanaged
-                libraries that i wrote in c++. through the integration of dlls, i was able to bring the power
-                and efficiency of c++ code directly into the c# unity codebase.<br>
-                additionally, i managed different unity versions throughout the project to maintain compatibility and
-                streamline development.
-            </p>
-            <p class="pb-2">
-                seamless interactions are a fundamental part of openlab.<br>
-                i implemented all the vr interactions using hand-tracking and the oculus sdk. this ensured an
-                immersive and familiar user experience for students.<br>
-            </p>
-            <p class="pb-2">
-                to provide relevant analytics about virtual lab experiences to professors and educators,
-                i also implemented a system for the unity client software to communicate with the web server.<br>
-                i achieved this by adding logic to post data and communicate with the openlab's web server api.
-            </p>
-            <p class=" pb-2">
-                i worked extensively on optimizing and debugging the unity software project to target quest
-                1/2 headsets.<br>
-                to ensure optimal cpu and gpu performance, i used various tools such as performance
-                analyzer, frame debugger, vrapi, systrace, renderdoc (meta fork), and perfetto, managing to bring
-                complex environments to standalone vr in under 60 draw calls.
-            </p>
-            <p class="pb-2">
-                as part of my role, i coordinated a team of 3d modelers and programmers, providing detailed instructions
-                on
-                how to develop optimized and performant models and code.
-            </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- developed from scratch the majority of the code for the software in unity using c#
+                </li>
+                <li class="ml-2">- developed a parser to create vr experiences from a json object</li>
+                <li class="ml-2">- wrote unmanaged libraries for the unity software in c++</li>
+                <li class="ml-2">- debugged and profiled the unity software for cpu/gpu performance</li>
+                <li class="ml-2">- implemented all vr interactions with hand-tracking and the oculus sdk</li>
+                <li class="ml-2">- implemented api communication with the web server (see <a
+                        class="text-brightGreen hover:underline" href="/projects/openlabvr-website.html">openlab
+                        website</a>)</li>
+                <li class="ml-2">- coordinated a team of 3d modelers and programmers</li>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - unity engine<br>
-            - c#<br>
-            - c++<br>
-            - oculus sdk<br>
-            - git & github<br>
-            - plastic scm<br>
-        </p>
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    the covid-19 pandemic has more clearly exposed the need for better training for stem students.<br>
+                    stem laboratories in schools are highly inaccessible due to safety concerns, limited equipment,
+                    and lack of materials.<br>
+                    for these reasons, i created openlabvr, a platform that provides fully equipped science laboratories
+                    in vr.<br>
+                    leveraging hand-tracking technology, openlab provides realistic interactions with lab objects,
+                    helping students build up confidence before entering a real laboratory.
+                </p>
+                <p class="pb-2">
+                    as the cto for the project, i wrote the majority of the code in unity c#, focusing on creating
+                    modular and reusable components for the vr software.<br>
+                    i also developed a custom parser to generate vr experiences from json files to allow for
+                    faster experience development, and to maximize code reutilization.<br>
+                    another key component of the software that i wrote was the integration with unmanaged
+                    libraries that i wrote in c++. through the integration of dlls, i was able to bring the power
+                    and efficiency of c++ code directly into the c# unity codebase.<br>
+                    additionally, i managed different unity versions throughout the project to maintain compatibility
+                    and
+                    streamline development.
+                </p>
+                <p class="pb-2">
+                    seamless interactions are a fundamental part of openlab.<br>
+                    i implemented all the vr interactions using hand-tracking and the oculus sdk. this ensured an
+                    immersive and familiar user experience for students.<br>
+                </p>
+                <p class="pb-2">
+                    to provide relevant analytics about virtual lab experiences to professors and educators,
+                    i also implemented a system for the unity client software to communicate with the web server.<br>
+                    i achieved this by adding logic to post data and communicate with the openlab's web server api.
+                </p>
+                <p class=" pb-2">
+                    i worked extensively on optimizing and debugging the unity software project to target quest
+                    1/2 headsets.<br>
+                    to ensure optimal cpu and gpu performance, i used various tools such as performance
+                    analyzer, frame debugger, vrapi, systrace, renderdoc (meta fork), and perfetto, managing to bring
+                    complex environments to standalone vr in under 60 draw calls.
+                </p>
+                <p class="pb-2">
+                    as part of my role, i coordinated a team of 3d modelers and programmers, providing detailed
+                    instructions
+                    on
+                    how to develop optimized and performant models and code.
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- unity engine</li>
+                <li class="ml-2">- c#</li>
+                <li class="ml-2">- c++</li>
+                <li class="ml-2">- oculus sdk</li>
+                <li class="ml-2">- git & github</li>
+                <li class="ml-2">- plastic scm</li>
+
+            </ul>
+        </div>
+
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/s4csLZ6ofKE?showinfo=0"
                         frameborder="0"
@@ -132,22 +141,33 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is proprietary and not publicly available; however, it can be made
-            available for review upon request.
-        </p>
-
-        <h2 class="text-md font-bold pt-3">links</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - <a href="https://openlabvr.com/" target="_blank">website</a><br>
-            - <a href="https://www.linkedin.com/company/openlabvr" target="_blank">linkedin</a><br>
-            - <a href="https://openlabvr.com/get-started" target="_blank">request a demo (meta quest)</a>
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is proprietary and not publicly available; however, it can be made
+                available for review upon request.
+            </p>
         </div>
+
+        <!-- links -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">links</h2>
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline"
+                        href="https://www.oculus.com/experiences/quest/3814747458576013/" target="_blank">openlab on
+                        quest store</a></li>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://openlabvr.com/"
+                        target="_blank">website</a></li>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline"
+                        href="https://www.linkedin.com/company/openlabvr" target="_blank">linkedin</a></li>
+
+            </ul>
+        </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+
     </div>
 </body>
 

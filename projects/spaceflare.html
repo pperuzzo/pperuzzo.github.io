@@ -7,92 +7,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">spaceflare</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">platform for commercial property owners
-            to host clean energy technologies</p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> active, in continuous development</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> team of 2</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> php, js, css, sql, aws</p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat spaceflare</span></p>
+        <h1 class="text-cyan">spaceflare - platform for commercial property owners
+            to host clean energy technologies</h1>
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> active, in continuous development</h3>
+            <h3><span class="text-brightYellow">project team: </span> team of 2</h3>
+            <h3><span class="text-brightYellow">tags: </span> php, js, css, sql, aws</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - designed and developed a fully responsive website frontend and backend from scratch<br>
-            - created a landing page, a web app for building owners, a web app for energy providers, and an admin
-            panel<br>
-            - integrated a utility data api to get energy consumption data from buildings<br>
-            - integrated stripe to accept payments<br>
-            - deployed the website to aws
-        </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- designed and developed a fully responsive website frontend and backend from scratch
+                </li>
+                <li class="ml-2">- created a landing page, a web app for building owners, a web app for energy
+                    providers, and an admin
+                    panel</li>
+                <li class="ml-2">- integrated a utility data api to get energy consumption data from buildings</li>
+                <li class="ml-2">- integrated stripe to accept payments</li>
+                <li class="ml-2">- deployed the website to aws</li>
 
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                commercial property owners often have extensive parts of their properties completely unused.<br>
-                this is usually in the form of roofs and parking lots.<br>
-                on the other end, energy providers are always on the lookout for spaces where they can build renewable
-                energy infrastructure and sell the energy generated.<br>
-                by leveraging a web app, i created spaceflare: a platform designed for commercial property owners to
-                host clean energy technologies, bridging the gap between building owners and energy providers.
-            </p>
-            <p class="pb-2">
-                the website consists of a landing page, a web application for building owners, a web application for
-                energy providers, and an admin panel for managing the platform.<br>
-                i designed and developed the majority of the code for spaceflare, ensuring that each component was
-                tailored to the specific needs of its respective user group, and (if possible) reusable throughout the
-                application.<br>
-                i developed the website using a combination of php laravel, vue.js, inertia.js, and tailwind css. the
-                whole system is supported by a mysql database that stores customer's data.
-            </p>
-            <p class="pb-2">
-                to provide accurate and up-to-date energy consumption data for buildings, i integrated a utility data
-                api.<br>
-                this feature allows building owners and energy providers to make informed decisions based on real-world
-                data.<br>
-                additionally, i helped integrate stripe into the website to enable seamless and secure payment
-                processing within the platform.
-            </p>
-            <p class="pb-2">
-                finally, i deployed the website to aws ec2 to ensure a reliable, scalable, and high-performance hosting
-                solution.
-            </p>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - php (laravel)<br>
-            - js (node, vue.js, inertia.js)<br>
-            - css (tailwind)<br>
-            - html <br>
-            - sql (mysql)<br>
-            - aws (rds, lightsail, s3, route53)<br>
-            - linux (ubuntu, wsl)<br>
-            - nginx<br>
-            - docker<br>
-            - git & github<br>
-            - google analytics<br>
-            - stripe
-        </p>
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    commercial property owners often have extensive parts of their properties completely unused.<br>
+                    this is usually in the form of roofs and parking lots.<br>
+                    on the other end, energy providers are always on the lookout for spaces where they can build
+                    renewable
+                    energy infrastructure and sell the energy generated.<br>
+                    by leveraging a web app, i created spaceflare: a platform designed for commercial property owners to
+                    host clean energy technologies, bridging the gap between building owners and energy providers.
+                </p>
+                <p class="pb-2">
+                    the website consists of a landing page, a web application for building owners, a web application for
+                    energy providers, and an admin panel for managing the platform.<br>
+                    i designed and developed the majority of the code for spaceflare, ensuring that each component was
+                    tailored to the specific needs of its respective user group, and (if possible) reusable throughout
+                    the
+                    application.<br>
+                    i developed the website using a combination of php laravel, vue.js, inertia.js, and tailwind css.
+                    the
+                    whole system is supported by a mysql database that stores customer's data.
+                </p>
+                <p class="pb-2">
+                    to provide accurate and up-to-date energy consumption data for buildings, i integrated a utility
+                    data
+                    api.<br>
+                    this feature allows building owners and energy providers to make informed decisions based on
+                    real-world
+                    data.<br>
+                    additionally, i helped integrate stripe into the website to enable seamless and secure payment
+                    processing within the platform.
+                </p>
+                <p class="pb-2">
+                    finally, i deployed the website to aws ec2 to ensure a reliable, scalable, and high-performance
+                    hosting
+                    solution.
+                </p>
+            </div>
+        </div>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- php (laravel)</li>
+                <li class="ml-2">- js (node, vue.js, inertia.js)</li>
+                <li class="ml-2">- css (tailwind)</li>
+                <li class="ml-2">- html</li>
+                <li class="ml-2">- sql (mysql)</li>
+                <li class="ml-2">- aws (rds, lightsail, s3, route53)</li>
+                <li class="ml-2">- linux (ubuntu, wsl)</li>
+                <li class="ml-2">- docker</li>
+                <li class="ml-2">- git & github</li>
+                <li class="ml-2">- google analytics</li>
+                <li class="ml-2">- stripe</li>
+            </ul>
+        </div>
+
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <img class="cursor-pointer image w-full aspect-auto" src="/imgs/spaceflare-1.jpg" />
                     <p>project view</p>
@@ -108,22 +123,30 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is proprietary and not publicly available; however, it can be made
-            available for review upon request.
-        </p>
-
-        <h2 class="text-md font-bold pt-3">links</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - <a href="https://spaceflare.io/" target="_blank">live website</a><br>
-            - <a href="https://app.spaceflare.io/" target="_blank">live web app</a><br>
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is proprietary and not publicly available; however, it can be made
+                available for review upon request.
+            </p>
         </div>
 
+        <!-- links -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">links</h2>
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://spaceflare.io/"
+                        target="_blank">live website</a></li>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline"
+                        href="https://app.spaceflare.io/" target="_blank">live web app</a></li>
+            </ul>
+        </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+
+        <!-- modal -->
         <div class="w-full cursor-pointer h-screen fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden"
             id="modal">
             <img id="modalImage" class="max-w-full max-h-full" src="">

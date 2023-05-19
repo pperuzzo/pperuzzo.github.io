@@ -7,91 +7,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        a {
-            color: #0000EE !important;
-        }
 
-        a:visited {
-            color: #0000EE !important;
-        }
-    </style>
+    <link href="../main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body style="font-family: 'Source Code Pro', monospace;">
-    <div class="pl-5 pt-5 text-xs">
-        <h1 class="text-lg font-bold">3d ppin</h1>
-        <p class="py-2 max-w-full md:max-w-2xl">a 3d interactive protein-protein interaction network visualizer
-        </p>
+<body class="bg-background text-foreground flex font-mono text-sm">
+    <div class="max-w-full md:max-w-2xl p-5">
 
-        <div class="max-w-full md:max-w-2xl">
-            <p class="text-md"><span class="font-bold">project status:</span> discountinued</p>
-            <p class="text-md pt-3"><span class="font-bold">project team: </span> solo</p>
-            <p class="text-md pt-3"><span class="font-bold">tags: </span> unity, c#, vr, oculus, sqlite, graph theory
-            </p>
+        <!-- command -->
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> cat ppin</span></p>
+        <h1 class="text-cyan">3d ppin - a 3d interactive protein-protein interaction network visualizer</h1>
+
+        <!-- info -->
+        <div class="py-5">
+            <h3><span class="text-brightYellow">project status:</span> discountinued</h3>
+            <h3><span class="text-brightYellow">project team: </span> solo</h3>
+            <h3><span class="text-brightYellow">tags: </span> unity, c#, vr, oculus, sqlite, graph theory</h3>
         </div>
 
-        <h2 class="text-md font-bold pt-3">tldr</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - fully developed the software from scratch in unity using c#<br>
-            - developed the 3d graphic side of the software using blender3d<br>
-            - created a sqlite db with more than 20 million protein records<br>
-            - used graph theory principles to dynamically apply different path-finding algorithms to the networks
-        </p>
+        <!-- tldr -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">tldr</h2>
+            <ul>
+                <li class="ml-2">- fully developed the software from scratch in unity using c#
+                </li>
+                <li class="ml-2">- developed the 3d graphic side of the software using blender3d</li>
+                <li class="ml-2">- created a sqlite db with more than 20 million protein records</li>
+                <li class="ml-2">- used graph theory principles to dynamically apply different path-finding algorithms
+                    to the networks</li>
 
-        <h2 class="text-md font-bold pt-3">overview</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <p class="pb-2">
-                when scientists need to analyze a vast number of protein-protein interactions, it can be useful to
-                visualize the problem as a graph. related protein connections can be found by analyzing different paths
-                that connect them.<br>
-                by leveraging vr, i created a way for scientists to analyze how proteins interact with each other.<br>
-                users can visualize protein interactions as a network with vertices representing the proteins, and edges
-                representing the connections.<br>
-            </p>
-            <p class="pb-2">
-                users can easily edit and customize the network using simple and intuitive interactions, visualizing the
-                relationships between proteins and finding paths between them.
-            </p>
-
-            <p class="pb-2">
-                i fully developed the software from scratch using unity and c#, and created the 3d graphic side of the
-                software using blender3d. this allowed me to design a useful and visually appealing virtual experiment.
-            </p>
-            <p class="pb-2">
-                i started by using available open-source protein-protein interactions databases.<br>
-                then, to store and manage the vast amount of protein data, i created a sqlite database containing more
-                than 20 million protein records. <br>
-                this allowed for efficient querying and manipulation directly from the unity software, which was a
-                crucial part of the software's functionality and performance.
-            </p>
-            <p class="pb-2">
-                using graph theory principles, i dynamically applied different path-finding algorithms to the networks,
-                such as the shortest path and breadth-first search algorithm (bfs). <br>
-                this approach allowed for simple and efficient analysis and visualization of protein interactions.<br>
-            </p>
-            <p class="pb-2">
-                i also implemented the fruchterman and reingold force-directed drawing algorithm for each graph.<br>
-                this allowed all the proteins in the graph to assume positions in relation to how much they depend on
-                each other.
-                this gives scientists better insight into the relationships between proteins.
-            </p>
+            </ul>
         </div>
 
-        <h2 class="text-md font-bold pt-3">technologies used</h2>
-        <p class="max-w-full md:max-w-2xl">
-            - unity engine<br>
-            - c#<br>
-            - sqlite<br>
-            - oculus sdk<br>
-            - unity xr sdk<br>
-            - git & github<br>
-        </p>
+        <!-- overview -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">overview</h2>
+            <div>
+                <p class="pb-2">
+                    when scientists need to analyze a vast number of protein-protein interactions, it can be useful to
+                    visualize the problem as a graph. related protein connections can be found by analyzing different
+                    paths
+                    that connect them.<br>
+                    by leveraging vr, i created a way for scientists to analyze how proteins interact with each
+                    other.<br>
+                    users can visualize protein interactions as a network with vertices representing the proteins, and
+                    edges
+                    representing the connections.<br>
+                </p>
+                <p class="pb-2">
+                    users can easily edit and customize the network using simple and intuitive interactions, visualizing
+                    the
+                    relationships between proteins and finding paths between them.
+                </p>
 
-        <h2 class="text-md font-bold pt-3">screenshots and media</h2>
-        <div class="max-w-full md:max-w-2xl">
-            <div class="grid md:grid-cols-2 gap-3 text-gray-600">
+                <p class="pb-2">
+                    i fully developed the software from scratch using unity and c#, and created the 3d graphic side of
+                    the
+                    software using blender3d. this allowed me to design a useful and visually appealing virtual
+                    experiment.
+                </p>
+                <p class="pb-2">
+                    i started by using available open-source protein-protein interactions databases.<br>
+                    then, to store and manage the vast amount of protein data, i created a sqlite database containing
+                    more
+                    than 20 million protein records. <br>
+                    this allowed for efficient querying and manipulation directly from the unity software, which was a
+                    crucial part of the software's functionality and performance.
+                </p>
+                <p class="pb-2">
+                    using graph theory principles, i dynamically applied different path-finding algorithms to the
+                    networks,
+                    such as the shortest path and breadth-first search algorithm (bfs). <br>
+                    this approach allowed for simple and efficient analysis and visualization of protein
+                    interactions.<br>
+                </p>
+                <p class="pb-2">
+                    i also implemented the fruchterman and reingold force-directed drawing algorithm for each graph.<br>
+                    this allowed all the proteins in the graph to assume positions in relation to how much they depend
+                    on
+                    each other.
+                    this gives scientists better insight into the relationships between proteins.
+                </p>
+            </div>
+        </div>
+
+        <!-- tech -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">technologies used</h2>
+            <ul>
+                <li class="ml-2">- unity engine</li>
+                <li class="ml-2">- c#</li>
+                <li class="ml-2">- sqlite</li>
+                <li class="ml-2">- oculus sdk</li>
+                <li class="ml-2">- unity xr sdk</li>
+                <li class="ml-2">- git & github</li>
+
+            </ul>
+        </div>
+
+        <!-- media -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">media</h2>
+            <div class="grid md:grid-cols-2 gap-3 text-brightBlack">
                 <div>
                     <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/Ib3AAOYMbTI" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -101,15 +120,21 @@
             </div>
         </div>
 
-        <h2 class="text-md font-bold pt-3">code</h2>
-        <p class="max-w-full md:max-w-2xl">
-            the source code for this project is available publicly on github:
-            <a href="https://github.com/pperuzzo/PPIN" target="_blank">link</a>
-        </p>
-
-        <div class="py-5">
-            <a class="underline" href="/building.html">back</a>
+        <!-- code -->
+        <div class="pb-5">
+            <h2 class="text-brightYellow">code</h2>
+            <p>
+                the source code for this project is available publicly on github:
+            <ul>
+                <li class="ml-2">- <a class="text-brightGreen hover:underline" href="https://github.com/pperuzzo/PPIN"
+                        target="_blank">link</a></li>
+            </ul>
+            </p>
         </div>
+
+        <!-- back -->
+        <a class="text-brightGreen hover:underline" href="/building.html">back</a>
+        
     </div>
 </body>
 
