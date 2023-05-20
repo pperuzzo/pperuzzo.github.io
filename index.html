@@ -15,7 +15,8 @@
 <body class="bg-background text-foreground flex font-mono text-sm">
     <h1 class="hidden">pierlorenzo peruzzo</h1>
     <div class="max-w-full md:max-w-2xl px-5">
-        <pre class="text-cyan">
+        <div class="overflow-x-hidden">
+            <pre class="text-cyan">
         .__             .__                                            
 ______ |__| ___________|  |   ___________   ____   ____ ____________  
 \____ \|  |/ __ \_  __ \  |  /  _ \_  __ \_/ __ \ /    \\___   /  _ \ 
@@ -28,15 +29,23 @@ ______    ____  _______  __ __ ________________  ____
 |  |_> >\  ___/  |  | \/|  |  / /    /  /    / (  <_> )                           
 |   __/  \___  > |__|   |____/ /_____ \/_____ \ \____/                            
 |__|         \/                      \/      \/           
-        </pre>
-        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span class="text-brightCyan">~</span>$<span class="text-brightYellow"> ls -la</span></p>
+            </pre>
+        </div>
+
+        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+                class="text-brightCyan">~</span>$<span class="text-brightYellow"> ls -la</span></p>
         <p class="pb-2">total 5</p>
         <ul class="space-y-2">
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a class="text-brightGreen hover:underline" href="about.html">.about</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a class="text-brightGreen hover:underline" href="building.html">.building</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a class="text-brightGreen hover:underline" href="inspo.html">.inspo</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a class="text-brightGreen hover:underline" href="art.html">.art</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a class="text-brightGreen hover:underline" href="manual.html">.user-manual</a></li>
+            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
+                    class="text-brightGreen hover:underline" href="about.html">.about</a></li>
+            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
+                    class="text-brightGreen hover:underline" href="building.html">.building</a></li>
+            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
+                    class="text-brightGreen hover:underline" href="inspo.html">.inspo</a></li>
+            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
+                    class="text-brightGreen hover:underline" href="art.html">.art</a></li>
+            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
+                    class="text-brightGreen hover:underline" href="manual.html">.user-manual</a></li>
         </ul>
     </div>
 
@@ -46,13 +55,13 @@ ______    ____  _______  __ __ ________________  ____
             "July", "August", "September", "October", "November", "December"];
         let formattedTime = monthNames[now.getMonth()] + ' ' +
             now.getDate() + ' ' +
-            now.getHours().toString().padStart(2, '0') + ':' + 
+            now.getHours().toString().padStart(2, '0') + ':' +
             now.getMinutes().toString().padStart(2, '0');
-    
-            let dateElements = document.getElementsByClassName("date");
-    for (let i = 0; i < dateElements.length; i++) {
-        dateElements[i].textContent = formattedTime;
-    }
+
+        let dateElements = document.getElementsByClassName("date");
+        for (let i = 0; i < dateElements.length; i++) {
+            dateElements[i].textContent = formattedTime;
+        }
     </script>
 
 </body>
