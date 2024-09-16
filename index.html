@@ -1,21 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title>~ pierlorenzo peruzzo</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+  <head>
+    <title>pier @ pperuzzo</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link href="main.css" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body class="bg-background text-foreground flex font-mono text-sm">
-    <h1 class="hidden">pierlorenzo peruzzo</h1>
-    <div class="max-w-full md:max-w-2xl px-5">
-        <!-- <div class="overflow-x-hidden">
+  <body class="font-mono text-sm bg-zinc-900 text-gray-200">
+    <div class="md:max-w-3xl mx-auto px-5 py-24 border-2 border-yellow-200">
+      <h1 class="hidden">pierlorenzo peruzzo</h1>
+
+      <div class="flex items-center space-x-4">
+        <img src="/imgs/pfp.png" class="aspect-square h-64 w-64" />
+        <div class="">
+          <h2 class="text-6xl mb-6">pier</h2>
+          <a href="">[<span class="underline">github</span>]</a>
+          <a href="">[<span class="underline">x</span>]</a>
+          <a href="">[<span class="underline">linkedin</span>]</a>
+        </div>
+      </div>
+
+      <p class="pt-2">
+        pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
+          class="text-brightCyan"
+          >~</span
+        >$<span class="text-brightYellow"> ls -la</span>
+      </p>
+
+      <p class="pb-2">total 5</p>
+
+      <ul class="space-y-2">
+        <li class="">
+          r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span
+            class="date"
+          ></span
+          >&nbsp;<a class="text-brightGreen hover:underline" href="about.html"
+            >.about</a
+          >
+        </li>
+        <li class="">
+          r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span
+            class="date"
+          ></span
+          >&nbsp;<a
+            class="text-brightGreen hover:underline"
+            href="building.html"
+            >.building</a
+          >
+        </li>
+        <li class="">
+          r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span
+            class="date"
+          ></span
+          >&nbsp;<a class="text-brightGreen hover:underline" href="inspo.html"
+            >.inspo</a
+          >
+        </li>
+        <li class="">
+          r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span
+            class="date"
+          ></span
+          >&nbsp;<a class="text-brightGreen hover:underline" href="art.html"
+            >.art</a
+          >
+        </li>
+        <li class="">
+          r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span
+            class="date"
+          ></span
+          >&nbsp;<a class="text-brightGreen hover:underline" href="manual.html"
+            >.user-manual</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<!-- <div class="overflow-x-hidden">
             <pre class="text-cyan">
         .__             .__                                            
 ______ |__| ___________|  |   ___________   ____   ____ ____________  
@@ -31,39 +104,3 @@ ______    ____  _______  __ __ ________________  ____
 |__|         \/                      \/      \/           
             </pre>
         </div> -->
-
-        <p class="pt-2">pperuzzo<span class="text-brightCyan">@</span>pperuzzo:<span
-                class="text-brightCyan">~</span>$<span class="text-brightYellow"> ls -la</span></p>
-        <p class="pb-2">total 5</p>
-        <ul class="space-y-2">
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
-                    class="text-brightGreen hover:underline" href="about.html">.about</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
-                    class="text-brightGreen hover:underline" href="building.html">.building</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
-                    class="text-brightGreen hover:underline" href="inspo.html">.inspo</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
-                    class="text-brightGreen hover:underline" href="art.html">.art</a></li>
-            <li class="">r--r--r--&nbsp;1&nbsp;pperuzzo pperuzzo&nbsp;4096&nbsp;<span class="date"></span>&nbsp;<a
-                    class="text-brightGreen hover:underline" href="manual.html">.user-manual</a></li>
-        </ul>
-    </div>
-
-    <script>
-        let now = new Date();
-        let monthNames = ["January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"];
-        let formattedTime = monthNames[now.getMonth()] + ' ' +
-            now.getDate() + ' ' +
-            now.getHours().toString().padStart(2, '0') + ':' +
-            now.getMinutes().toString().padStart(2, '0');
-
-        let dateElements = document.getElementsByClassName("date");
-        for (let i = 0; i < dateElements.length; i++) {
-            dateElements[i].textContent = formattedTime;
-        }
-    </script>
-
-</body>
-
-</html>
