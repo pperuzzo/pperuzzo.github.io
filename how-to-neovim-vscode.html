@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tech-artisan @ pperuzzo</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link href="main.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+  </head>
+
+  <body class="font-mono text-sm bg-zinc-900 text-gray-200">
+
+    <div class="md:max-w-3xl mx-auto px-5 py-24">
+      <h2 class="text-6xl">
+        How to install Neovin + Neovim VSCode in Ubuntu WSL
+      </h2>
+
+      <hr class="my-6" />
+
+      <!-- intro -->
+      <article class="prose">
+        <h2 class="text-gray-200">
+          # Who this guide is for
+        </h2>
+        <p class="text-gray-300">
+          If you are on Windows (10 or 11) and are using WSL for your daily
+          development.
+        </p>
+        <p>
+          If you are trying to get into Neovim, you are coming from VSCode, but
+          you are not fully ready to switch yet.
+        </p>
+        <p id="11d3df83-95d6-80d5-bfdc-d8cd73e079cd" class="">
+          Then this guide is for you! I will show you how to get regular Neovim
+          setup in WSL and how to get it to work also inside VSCode.
+        </p>
+        <h2 id="11d3df83-95d6-80e7-a04c-f19ea48e901e" class="">
+          Prerequisites
+        </h2>
+        <p id="11d3df83-95d6-8026-aeab-d16eb05da37e" class="">
+          Have WSL correctly installed and configured.
+        </p>
+        <p id="11d3df83-95d6-80a4-841c-c558c22ee64c" class="">
+          Make sure the latest version of <code>wsl</code> is installed (<code
+            >wsl --update</code
+          >) and make sure that you are on version 2 of <code>wsl</code> (<code
+            >wsl --set-default-version 2</code
+          >)
+        </p>
+        <h2 id="11d3df83-95d6-8058-90b8-e15364692321" class="">
+          Step 1: Configure WSL
+        </h2>
+        <p id="11d3df83-95d6-80f8-be94-d9455c2b8510" class="">
+          Make sure that Ubuntu is selected as the default version in WSL
+        </p>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+          integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+          integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <pre
+          id="11d3df83-95d6-8014-8f32-fed52012c80b"
+          class="code"
+        ><code class="language-Bash">wsl --list --all</code></pre>
+        <p id="11d3df83-95d6-8071-9736-c91912ef983d" class="">
+          If not, set it as default
+        </p>
+        <pre
+          id="11d3df83-95d6-805e-ab49-dfa83ad115fb"
+          class="code"
+        ><code class="language-Bash">wsl --setdefault Ubuntu #or whatever is the name of your ubuntu distro</code></pre>
+        <h2 id="11d3df83-95d6-80f7-b15e-d43f516b361f" class="">
+          Step 2: Prepare Ubuntu
+        </h2>
+        <p id="11d3df83-95d6-8016-981f-fb37adde49bb" class="">
+          Older versions of Ubuntu can cause some troubles (especially we we
+          will configure the VSCode part). This guide has been tested with
+          Ubuntu 24.04. I was personally having some issues with Ubuntu 22.04,
+          so upgrading fixed it for me. If upgrading Ubuntu is not an option for
+          you, you can try and skip this step.
+        </p>
+        <p id="11d3df83-95d6-80c2-be32-dafc1a1215c5" class="">
+          Inside Ubuntu, check the version that you have currently installed:
+        </p>
+        <pre
+          id="11d3df83-95d6-80eb-a720-fc03e1a957cd"
+          class="code"
+        ><code class="language-Bash">lsb_release -a</code></pre>
+        <p id="11d3df83-95d6-801e-ab3f-fe43a25191e1" class="">
+          If the version is lower than 24.04, update Ubuntu WSL. Inside Ubuntu
+          type
+        </p>
+        <pre
+          id="11d3df83-95d6-80be-b35a-f34683c3e68b"
+          class="code"
+        ><code class="language-Bash">sudo apt update &amp;&amp; sudo apt full-upgrade</code></pre>
+        <p id="11d3df83-95d6-8014-b24c-fd0fa8d446ac" class="">
+          Now exit Ubuntu and in your Windows PowerShell fully shut down Ubuntu
+        </p>
+        <pre
+          id="11d3df83-95d6-80c3-a9cb-da5e65b0994d"
+          class="code"
+        ><code class="language-Bash">wsl --terminate Ubuntu #or whatever is the name of your ubuntu distro</code></pre>
+        <p id="11d3df83-95d6-8040-9715-fcbd60ecd597" class="">
+          Finally, restart Ubuntu and run the install by typing
+        </p>
+        <pre
+          id="11d3df83-95d6-803a-92e9-cf41defd0716"
+          class="code"
+        ><code class="language-Bash">sudo do-release-upgrade</code></pre>
+        <p id="11d3df83-95d6-8034-8914-fcb59334b090" class="">
+          Once done, make sure that the update was successful and that you are
+          on v24.04
+        </p>
+        <figure
+          id="11d3df83-95d6-8033-82c0-e34c2db5946f"
+          class="image"
+          style="text-align: left"
+        >
+          <a href="a3c7acc28dec5fb72d71efaec3bb83ed.png"
+            ><img
+              style="width: 385px"
+              src="a3c7acc28dec5fb72d71efaec3bb83ed.png"
+          /></a>
+        </figure>
+        <h2 id="11d3df83-95d6-80a4-88ae-cda01846d218" class="">
+          Step 3: Install Neovim
+        </h2>
+        <p id="11d3df83-95d6-8030-ad0c-d1b19dd96aa0" class="">
+          We can now install Neovim in WSL Ubuntu.
+        </p>
+        <p id="11d3df83-95d6-8083-ae50-ca37c6218d4c" class="">
+          We are going to setup Neovim via a
+          <a href="https://appimage.org/">AppImage</a>. No installation is
+          needed. We will just download and run the image.
+        </p>
+        <p id="11d3df83-95d6-8091-afc5-deb230ae80c9" class="">
+          The reason why we use the AppImage is because Ubuntu might not have
+          the latest version of the Neovim Package available. This way ensures
+          that we get the latest stable version.<br />Neovim is rapidly
+          developing, so using the latest stable version is what we want to do
+          here (especially for the last step of this guide where we are going to
+          use Neovim VSCode)<br />
+        </p>
+        <p id="11d3df83-95d6-802f-bbed-cfe943ac63ff" class="">
+          To be able to run AppImage, we need to make sure we have
+          <code>libfuse2</code> installed
+        </p>
+        <pre
+          id="11d3df83-95d6-8080-9ceb-cb0c18303945"
+          class="code"
+        ><code class="language-Bash">sudo apt install libfuse2</code></pre>
+        <p id="11d3df83-95d6-8067-99c4-d26083e76b86" class="">
+          Now we can move on to the actual installation.
+        </p>
+        <p id="11d3df83-95d6-80a2-b419-d7543f130258" class="">
+          Go to the Neovim Website ⇒ Install Now (<a
+            href="https://github.com/neovim/neovim/blob/master/INSTALL.md"
+            >link</a
+          >). Scroll down to the AppImage section.
+        </p>
+        <pre
+          id="11d3df83-95d6-8011-9196-d82401ec8ecd"
+          class="code"
+        ><code class="language-Bash"># Download the app image
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+  # Add permissions to run the appimage file
+  chmod u+x nvim.appimage
+  # Run the app image
+  ./nvim.appimage</code></pre>
+        <p id="11d3df83-95d6-80d5-92ff-dc9e7368c47d" class="">
+          This should open Neovim! Type <code>:q&lt;Enter&gt;</code> to exit.
+        </p>
+        <p id="11d3df83-95d6-8006-a391-e64786f512c0" class="">
+          This is nice! However this will require to run Neovim using the full
+          file path (eg: <code>~./nvim.appimage</code>). So we want to expose
+          Neovim globally to just run <code>nvim</code> to start it.
+        </p>
+        <p id="11d3df83-95d6-80aa-b681-f9ed13d1ce62" class="">
+          To do that, we first move the <code>nvim.appimage</code> to a better
+          directory
+        </p>
+        <pre
+          id="11d3df83-95d6-800a-b051-cb046534f52f"
+          class="code"
+        ><code class="language-Bash">sudo mkdir -p /opt/nvim
+  sudo mv nvim.appimage /opt/nvim/nvim</code></pre>
+        <p id="11d3df83-95d6-8093-885d-fe386efce185" class="">
+          Then we need to add this to our PATH. To do that, we need to edit the
+          shell config file.
+        </p>
+        <p id="11d3df83-95d6-80aa-a77a-d053e91065ff" class="">
+          For WSL Ubuntu, by default the shell is Bash. So we need to edit the
+          <code>~/.bashrc</code> file.
+        </p>
+        <figure
+          class="block-color-gray_background callout"
+          style="white-space: pre-wrap; display: flex"
+          id="11d3df83-95d6-80ec-9f6b-c053d6d00bfb"
+        >
+          <div style="font-size: 1.5em"><span class="icon">❗</span></div>
+          <div style="width: 100%">
+            <p id="c717e6d3-1613-4e76-ba3e-898aadbe5582" class="">
+              If you are using another shell, you have to edit the shell config
+              file specific to your shell. First find out which shell you are
+              using by typing <code>echo $SHELL</code> and finally edit the
+              appropriate file.
+            </p>
+          </div>
+        </figure>
+        <p id="11d3df83-95d6-8093-897d-e173ab370932" class="">
+          Open the shell config file with any text editor. In this case I am
+          using <code>nano</code>, but you can also use <code>vi</code> (should
+          be already installed!)
+        </p>
+        <pre
+          id="11d3df83-95d6-8094-85ca-eaa514670c8f"
+          class="code"
+        ><code class="language-Bash">sudo nano ~/.bashrc</code></pre>
+        <p id="11d3df83-95d6-80e7-afd4-f2a4318cb8ef" class="">
+          Scroll all the way to the bottom and add the following line
+        </p>
+        <pre
+          id="11d3df83-95d6-803b-95f7-f45f44078dde"
+          class="code"
+        ><code class="language-Bash">export PATH=&quot;$PATH:/opt/nvim/&quot;</code></pre>
+        <p id="11d3df83-95d6-80b0-87e1-fc8a7905ae7a" class="">
+          This will append the <code>/opt/nvim/</code> directory (where we have
+          our Neovim appimage file) to the PATH.
+        </p>
+        <p id="11d3df83-95d6-8094-8406-e7eb622fb582" class="">
+          Exit nano (<code>ctrl + x</code> , <code>y</code> ,
+          <code>&lt;Enter&gt;</code>) and run the <code>source</code> command to
+          refresh the shell
+        </p>
+        <pre
+          id="11d3df83-95d6-80f6-a2e6-e47e6e9c7f02"
+          class="code"
+        ><code class="language-Bash">source ~/.bashrc</code></pre>
+        <p id="11d3df83-95d6-802d-bb97-f69dcfdb808c" class="">
+          now, running <code>nvim</code> should open up Neovim from any
+          directory!
+        </p>
+        <p id="11d3df83-95d6-8018-a354-f2f954c9dbe4" class="">
+          Finally, we want to add a configuration folder. Here we will store our
+          Neovim configuration.
+        </p>
+        <p id="11d3df83-95d6-8001-a4b6-d8e82bc949f6" class="">
+          First of all check if you already have a <code>.config</code> folder
+          in your root (<code>cd ~/.config</code>). If not, you can simply
+          create it by <code>sudo mkdir ~/.config</code> . <code>cd</code> into
+          the config directory.
+        </p>
+        <p id="11d3df83-95d6-80f6-b1e0-d1c0a35a79a6" class="">
+          Neovim will look into this <code>.config</code> directory for a
+          <code>nvim</code> directory. So we can create it by
+          <code>sudo mkdir nvim</code>.
+        </p>
+        <p id="11d3df83-95d6-80b5-96b4-c757ae03f7d4" class="">
+          Here in this folder we can add Neovim configurations (<code
+            >vi init.lua</code
+          >). But this is besides the scope of this guide.
+        </p>
+        <h2 id="11d3df83-95d6-80ff-8589-cc43b3a9665f" class="">
+          Step 4: Configure Neovim VSCode
+        </h2>
+        <p id="11d3df83-95d6-809d-9cfe-f0948d36dafa" class="">
+          Now that we have Neovim installed correctly, we want to be able to use
+          it inside our VSCode.
+        </p>
+        <p id="11d3df83-95d6-8016-ab34-f74d8149fbf8" class="">
+          Note that this configuration will only work for VSCode when running
+          inside WSL.
+        </p>
+        <p id="11d3df83-95d6-808d-a162-ce3fc7ea8d52" class="">
+          To start, open up VSCode (in WSL!!), go to the extensions tab. Here
+          you can search for “VSCode Neovim” or you can simply install it from
+          this
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim"
+            >link</a
+          >.
+        </p>
+        <p id="11d3df83-95d6-804b-8101-c77fe371244e" class="">
+          To make Neovim work with WSL, we need to do a couple more steps. First
+          of all, open up VSCode settings (<code>ctrl</code> + <code>,</code>).
+          Click on “neovim” from the left side menu.
+        </p>
+        <figure id="11d3df83-95d6-8049-9a4f-fad8632935de" class="image">
+          <a href="3a0552368e62e8afbb59511d3fd7df84.png"
+            ><img
+              style="width: 707.96875px"
+              src="3a0552368e62e8afbb59511d3fd7df84.png"
+          /></a>
+        </figure>
+        <p id="11d3df83-95d6-8091-8838-f41a4907fd90" class="">
+          Now we need to configure 2 important settings:
+        </p>
+        <ol
+          type="1"
+          id="11d3df83-95d6-8012-9773-f28b5ff9e405"
+          class="numbered-list"
+          start="1"
+        >
+          <li>
+            Set “Use WSL” to true
+            <figure id="11d3df83-95d6-800e-bd37-fa553d999912" class="image">
+              <a href="6f7ffb53bc374616d489da6ab2a515d8.png"
+                ><img
+                  style="width: 679.984375px"
+                  src="6f7ffb53bc374616d489da6ab2a515d8.png"
+              /></a>
+            </figure>
+          </li>
+        </ol>
+        <ol
+          type="1"
+          id="11d3df83-95d6-8025-91ce-cd6ecdd83d27"
+          class="numbered-list"
+          start="2"
+        >
+          <li>
+            Manually set the “Neovim Executable Path: Linux”. In that box we
+            have to specify the path where we installed Neovim earlier. If you
+            recall, we installed it in <code>/opt/nvim/nvim</code>. If you are
+            unsure of where your Neovim is installed, you can just type in
+            <code>which nvmin</code> in the terminal and copy the output in the
+            field. You should now have something like this:
+            <figure id="11d3df83-95d6-8089-85b1-d744a8b5f042" class="image">
+              <a href="65c9067b251a8deec7dfe04168207e51.png"
+                ><img
+                  style="width: 679.9375px"
+                  src="65c9067b251a8deec7dfe04168207e51.png"
+              /></a>
+            </figure>
+          </li>
+        </ol>
+        <p id="11d3df83-95d6-8055-82de-c0ca7008ffb8" class="">
+          Restart VSCode to apply the changes, open up a file, and you are done!
+          Congratulations, you are now using Neovim with VSCode!
+        </p>
+      </article>
+
+      <hr class="my-6" />
+
+      <!-- back -->
+      <section>
+        <p>[<a class="underline" href="writing.html">back</a>]</p>
+      </section>
+    </div>
+  </body>
+</html>
