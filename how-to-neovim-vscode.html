@@ -20,7 +20,7 @@
   <body class="font-mono text-sm bg-zinc-900 text-gray-200">
     <div class="md:max-w-3xl mx-auto px-5 py-24">
       <h2 class="text-6xl">
-        How to install Neovin + Neovim VSCode in Ubuntu WSL
+        How to install Neovin + Neovim VSCode in Ubuntu WSL (AppImage)
       </h2>
 
       <hr class="my-6" />
@@ -29,6 +29,35 @@
       <article
         class="prose prose-p:text-gray-300 prose-headings:text-gray-200 prose-code:text-blue-400 prose-a:underline prose-a:text-gray-100 prose-li:text-gray-200"
       >
+        <h2># Introduction</h2>
+        <p>
+          One gloomy Sunday afternoon, I tried to install Neovim and VSCode
+          Neovim in my work setup (Windows 10 & Ubuntu WSL). Unfortunately, I
+          was faced with many issues and I could not get this configuration to
+          work properly.
+        </p>
+        <p>
+          There are different ways available to install Neovim on Ubuntu. In my
+          case, the only solution that worked was to install Neovim via AppImage
+          and configure everything in a very specific way. However, you should
+          note that
+          <b>AppImage is not the reccomanded way to install Neovim.</b>
+        </p>
+        <p>
+          So if you are just starting out, you should follow
+          <a
+            href="https://github.com/neovim/neovim/blob/master/INSTALL.md#ubuntu"
+            >these instructions</a
+          >
+          to install Neovim using the Ubuntu PPA. You can then jump to "Step 4"
+          of this guide to wrap up the setup.
+        </p>
+        <p>
+          If instead you tried installing Neovim using the PPA but are still
+          experiencing some issues, then you should give a try to this guide.
+          This guide will specifically install and setup Neovim using the
+          AppImage.
+        </p>
         <h2># Who this guide is for</h2>
         <p>
           If you are on Windows (10 or 11) and are using WSL for your daily
@@ -96,9 +125,9 @@
           on v24.04
         </p>
         <figure class="image" style="text-align: left">
-            <img
-              style="width: 385px"
-              src="/imgs/writing/a3c7acc28dec5fb72d71efaec3bb83ed.png"
+          <img
+            style="width: 385px"
+            src="/imgs/writing/a3c7acc28dec5fb72d71efaec3bb83ed.png"
           />
         </figure>
         <h2># Step 3: Install Neovim</h2>
@@ -220,6 +249,13 @@
           Now that we have Neovim installed correctly, we want to be able to use
           it inside our VSCode.
         </p>
+        <p class="py-2">
+          <b>
+            NOTE: Before proceeding, make sure that <code>wsl --list --all</code> has
+            "Ubuntu" set as your default WSL. For more info, view "Step 2" of
+            this guide.
+          </b>
+        </p>
         <p>
           To start, open up VSCode (in WSL!!), go to the extensions tab. Here
           you can search for "VSCode Neovim" or you can simply install it from
@@ -235,9 +271,9 @@
           Click on "neovim" from the left side menu.
         </p>
         <figure class="image">
-            <img
-              style="width: 707.96875px"
-              src="/imgs/writing/3a0552368e62e8afbb59511d3fd7df84.png"
+          <img
+            style="width: 707.96875px"
+            src="/imgs/writing/3a0552368e62e8afbb59511d3fd7df84.png"
           />
         </figure>
         <p>Now we need to configure 2 important settings:</p>
@@ -245,9 +281,9 @@
           <li>
             Set "Use WSL" to true
             <figure class="image">
-                <img
-                  style="width: 679.984375px"
-                  src="/imgs/writing/6f7ffb53bc374616d489da6ab2a515d8.png"
+              <img
+                style="width: 679.984375px"
+                src="/imgs/writing/6f7ffb53bc374616d489da6ab2a515d8.png"
               />
             </figure>
           </li>
@@ -261,9 +297,9 @@
             <code>which nvmin</code> in the terminal and copy the output in the
             field. You should now have something like this:
             <figure class="image">
-                <img
-                  style="width: 679.9375px"
-                  src="/imgs/writing/65c9067b251a8deec7dfe04168207e51.png"
+              <img
+                style="width: 679.9375px"
+                src="/imgs/writing/65c9067b251a8deec7dfe04168207e51.png"
               />
             </figure>
           </li>
